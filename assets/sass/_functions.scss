@@ -1,0 +1,387 @@
+@mixin backgroundIMG(
+    $imgName,
+    $extension: 'jpg',
+    $important: 0,
+    $color: 'none',    
+    ) {
+        @if $extension == 'svg' {
+            background: {
+                @if $important == 1 {                     
+                    image: url('../cja-ctl/assets/img/svg/' + $imgName + '.' + $extension) !important;
+                } @else {
+                    image: url('../cja-ctl/assets/img/svg/' + $imgName + '.' + $extension);
+                }
+                size: cover;
+                position: center center;
+                repeat: no-repeat;
+                @if ($color != 'none') {
+                    color: $color;
+                }
+            }
+        } @else {
+            background: {
+                @if $important == 1 { 
+                    image: url('../cja-ctl/assets/img/webp/' + $imgName + '.webp') !important;
+                } @else {
+                    image: url('../cja-ctl/assets/img/webp/' + $imgName + '.webp');
+                }
+                size: cover;
+                position: center center;
+                repeat: no-repeat;
+                @if ($color != 'none') {
+                    color: $color;
+                }
+            }
+            @media not all and (min-resolution:.001dpcm){ 
+                @supports (-webkit-appearance:none) {
+                    background: {
+                        @if $important == 1 { 
+                            image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                        } @else {
+                            image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                        }
+                        size: cover;
+                        position: center center;
+                        repeat: no-repeat;
+                        @if ($color != 'none') {
+                            color: $color;
+                        }
+                    }
+                }
+            }
+            @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone 3 */
+            @media only screen and (min-device-width: 320px) and (max-device-height: 480px) and (-webkit-device-pixel-ratio: 1) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            
+            /* iphone 4 */
+            @media only screen and (min-device-width: 320px) and (max-device-height: 480px) and (-webkit-device-pixel-ratio: 2) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            
+            /* iphone 5 */
+            @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (-webkit-device-pixel-ratio: 2) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            
+            /* iphone 6, 6s, 7, 8 */
+            @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone 6+, 6s+, 7+, 8+ */
+            @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (-webkit-device-pixel-ratio: 3) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone X , XS, 11 Pro, 12 Mini */
+            @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (-webkit-device-pixel-ratio: 3) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone 12, 12 Pro */
+            @media only screen and (min-device-width: 390px) and (max-device-height: 844px) and (-webkit-device-pixel-ratio: 3) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone XR, 11 */
+            @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 2) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone XS Max, 11 Pro Max */
+            @media only screen and (min-device-width : 414px) and (max-device-height : 896px) and (-webkit-device-pixel-ratio : 3) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /* iphone 12 Pro Max */
+            @media only screen and (min-device-width : 428px) and (max-device-height : 926px) and (-webkit-device-pixel-ratio : 3) { 
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /*iPad Pro 9.7"*/
+            /* Portrait */
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (orientation: portrait)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+
+            /* Landscape */
+            @media only screen
+            and (min-device-width: 768px)
+            and (max-device-width: 1024px)
+            and (orientation: landscape)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /*iPad Pro 10.5"*/
+            /* Portrait */
+            /* Declare the same value for min- and max-width to avoid colliding with desktops */
+            /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+            @media only screen
+            and (min-device-width: 834px)
+            and (max-device-width: 834px)
+            and (orientation: portrait)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+
+            /* Landscape */
+            /* Declare the same value for min- and max-width to avoid colliding with desktops */
+            /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+            @media only screen
+            and (min-device-width: 1112px)
+            and (max-device-width: 1112px)
+            and (orientation: landscape)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            /*ipad PRo 12.9"*/
+            /* Portrait */
+            /* Declare the same value for min- and max-width to avoid colliding with desktops */
+            /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+            @media only screen
+            and (min-device-width: 1024px)
+            and (max-device-width: 1024px)
+            and (orientation: portrait)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+
+            /* Landscape */
+            /* Declare the same value for min- and max-width to avoid colliding with desktops */
+            /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+            @media only screen
+            and (min-device-width: 1366px)
+            and (max-device-width: 1366px)
+            and (orientation: landscape)
+            and (-webkit-min-device-pixel-ratio: 2) {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension) !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/' + $imgName + '.' + $extension);
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }
+            // Firefox	
+            @-moz-document url-prefix() {
+                background: {
+                    @if $important == 1 { 
+                        image: url('../cja-ctl/assets/img/webp/' + $imgName + '.webp') !important;
+                    } @else {
+                        image: url('../cja-ctl/assets/img/webp/' + $imgName + '.webp');
+                    }
+                    size: cover;
+                    position: center center;
+                    repeat: no-repeat;
+                    @if ($color != 'none') {
+                        color: $color;
+                    }
+                }
+            }            
+
+        }
+}
+
+@mixin animateThis() {
+    -webkit-transition-duration: $animation-duration;
+    transition-duration: $animation-duration;
+}
