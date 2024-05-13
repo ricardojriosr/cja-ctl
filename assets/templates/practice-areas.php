@@ -1,7 +1,10 @@
 <div class="hero-banner hero-banner-bg hero-pa">
+    <picture>
+        <img src="/wp-content/uploads/2024/04/GettyImages-1346156711-scaled.jpg" alt="Results" class="f-image">
+    </picture>
     <div class="caption-hero">
         <h1 class="f-red uppercase center">
-            <span class="f-white small-fornt">Our</span><br>
+            <span class="f-white small-font">Our</span><br>
             Practice Areas
         </h1>
         <p class="f-white center">

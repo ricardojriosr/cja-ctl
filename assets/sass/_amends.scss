@@ -104,6 +104,30 @@
         font-size: 150px !important;
         line-height: 120px !important;
     }
+    .f-155 {
+        font-size: 155px !important;
+        line-height: 125px !important;
+    }
+    .f-96 {
+        font-size: 96px !important;
+        line-height: 90px !important;
+    }
+    .f-40 {
+        font-size: 40px !important;
+        line-height: 35px !important;
+    }
+    .f-125 {
+        font-size: 125px !important;
+        line-height: 70px !important;
+    }
+    .f-55 {
+        font-size: 55px !important;
+        line-height: 40px;
+    } 
+    .f-40 {
+        font-size: 40px !important;
+        line-height: 36px;
+    }   
     .f-64 {
         font-size: 64px !important;
     }
@@ -146,3 +170,73 @@
         content: none;
     }
 }
+
+.caption2 {
+    flex-direction: column;
+}
+
+.practice-areas-template-default {
+    .container-site {
+        .hero-banner {
+            .caption-hero {
+                p {
+                    @media screen and (min-width: 1200px) {
+                        font-size: 36px;
+                        max-width: $maxDesktop;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-template-page-overlay {
+    .container-site {
+        .hero-banner {
+            display: flex;
+            min-height: 1px;
+            height: max-content;
+            .f-image {
+                display: flex;
+                height: 100%;
+                width: 100%;
+            }
+            .caption-hero {
+                p {
+                    @media screen and (min-width: 1200px) {
+                        font-size: 36px;
+                        max-width: $maxDesktop;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.page-id-144 {
+    .container-site {
+        .hero-banner {
+            @media screen and (min-width: 1200px) {
+                min-height: 700px !important;
+                .caption-hero {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+                &::after {
+                    min-height: 700px !important;
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                }  
+                .f-image {
+                    min-height: 700px !important;
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                }              
+            }       
+        }
+    }
+}   

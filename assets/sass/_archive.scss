@@ -78,13 +78,13 @@
     .hero-banner.hero-pa {
         min-height: 450px;
         @media screen and (min-width: 1200px) {
-            min-height: 550px;
+            min-height: 700px;
         }
         img,
         &::after {
             min-height: 450px;
             @media screen and (min-width: 1200px) {
-                min-height: 550px;
+                min-height: 700px;
             }
         }
         .caption-hero {
@@ -133,3 +133,40 @@
     }
 }
 
+
+.post-type-archive-practice-areas {
+    .hero-banner {
+        .caption-hero {
+            p {
+                @media screen and (min-width: 1200px) {
+                    max-width: $maxDesktop;
+                    font-size: 36px;
+                    font-weight: 300;
+                    line-height: normal;
+                }
+            }
+            h1 {
+                font-weight: 800;
+                background: linear-gradient(139deg, #ED0D27 39.58%, #C9051C 67.86%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @media screen and (min-width: 1200px) {
+                    font-size: 150px;
+                    line-height: 120px !important;
+                }                
+                .small-font {
+                    font-weight: 800;
+                    background: #fff;
+                    color: #fff;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    @media screen and (min-width: 1200px) {
+                        font-size: 100px;   
+                    }                    
+                }
+            }
+        }
+    }
+}

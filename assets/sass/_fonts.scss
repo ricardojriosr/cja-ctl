@@ -303,3 +303,17 @@ h2.attorney-title {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
 }
+
+.f-left {
+    text-align: left !important;
+}
+
+.practice-areas-template-default {
+    .the-content {
+        .caption {
+            p, ul, li {
+                font-size: 24px !important;
+            }
+        }
+    }
+}

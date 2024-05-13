@@ -259,6 +259,7 @@ body {
         text-align: center;
         align-self: center;
         font-size: 28px;
+        font-weight: 800;
         @media screen and (min-width: 1200px) {
             font-size: 64px;
         }
@@ -300,6 +301,7 @@ body {
             margin-top: 10px;
             min-height: 255px;
             flex-grow: 1;
+            border-radius: 5px;
             @media screen and (max-width: 1199px) {
                 width: calc(100% - 40px);
                 max-width: 100%;                
@@ -311,6 +313,9 @@ body {
                 @media screen and (min-width: 1600px) {
                     font-size: 64px;   
                 }
+            }
+            p {
+                font-size: 20px !important;
             }
             a {
                 margin-top: 20px;
@@ -332,6 +337,31 @@ body {
                     $calculatedWidthMillion: calc(($calculatedWidth * 2) + 65px);
                     width: $calculatedWidthMillion;
                     flex-basis: $calculatedWidthMillion;
+                }
+            }
+            h2 {
+                font-weight: 800;
+                @media screen and (min-width: 1200px) {
+                    font-size: 48px;
+                }
+                span.f-red {
+                    font-weight: 800;
+                }
+            }
+            &.million {
+                h2 {
+                    font-weight: 800;
+                    @media screen and (min-width: 1200px) {
+                        font-size: 96px;    
+                    }
+                    span.f-red {
+                        font-weight: 800;
+                    }
+                }
+                p {
+                    font-size: 24px !important;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
                 }
             }
         }
@@ -373,6 +403,7 @@ body {
         position: relative;
         z-index: 1;        
         cursor: pointer;
+        border-radius: 5px;
         @media screen and (min-width: 1200px) {
             min-height: 320px;
             width: calc((100% / 2) - 80px);
@@ -395,14 +426,17 @@ body {
             height: 100%;
             z-index: 2;
             position: absolute;
+            border-radius: 5px;
         }
         h2 {
             position: relative;
             z-index: 3;
             font-size: 40px;
             text-align: center;
+            line-height: 42px;
             @media screen and (min-width: 1200px) {
                 font-size: 48px;
+                line-height: 45px;
             }
         }
         &:hover {
@@ -585,4 +619,239 @@ a.f-phone {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+
+#form-container-bg {
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;    
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        width : 100%;
+        height: 100%;
+        background-image: url('/wp-content/themes/cja-ctl/assets/img/home-mobile-bg-form.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        z-index: -1;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+    &.no-home {
+        background-image: none;
+    }
+    #form-container {
+        padding: 20px;
+        border-radius: 15px;
+        text-align: center;
+        background: url('/wp-content/themes/cja-ctl/assets/img/form-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 2;
+        
+        &::after {
+            content: " ";
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            top: 0; bottom: 0; left: 0; right: 0;
+            z-index: 2;
+            background: linear-gradient(to bottom, rgba(#000, 0.7), rgba(#000, 1));
+            border-radius: 15px;
+        }
+        
+        .gform_submission_error {
+            color: red;
+        }
+        .gform-body.gform_body {
+            transform: translateX(-4px);
+            
+        }        
+        h2 {
+            font-size: 40px;
+            align-self: center;
+            position: relative;
+            z-index: 3;
+            
+        }
+        span {        
+            align-self: center;
+            margin-top: 20px;
+            margin-bottom: 20px;            
+            position: relative;
+            z-index: 3;            
+            
+        }
+        #form-container-inside-2,
+        #form-container-inside {
+            z-index: 3;
+            position: relative;
+            z-index: 3;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            width: 100%;
+            min-width: 100%;            
+            .gform_heading {
+                display: none;
+            }
+            .gform-body {
+                ul#gform_fields_1 {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;                    
+                    li {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            display: none;
+                        }                        
+                        div {
+                            margin-top: 8px;
+                            margin-bottom: 8px;
+                            transform: translateX(-6px);                            
+                            input, textarea {
+                                width: 100%;
+                                // min-height: 40px;
+                                max-height: 100px;
+                                font-size: 20px;
+                                border: 2px solid white;
+                                color: white;
+                                background: transparent !important;
+                                padding: 8px;
+                                border-radius: 6px;
+                                &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                                    color:    #fff;
+                                }
+                                &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                                    color:    #fff;
+                                    opacity:  1;
+                                }
+                                &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                                    color:    #fff;
+                                    opacity:  1;
+                                }
+                                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                                    color:    #fff;
+                                }
+                                &::-ms-input-placeholder { /* Microsoft Edge */
+                                    color:    #fff;
+                                }
+                                &::placeholder { /* Most modern browsers support this now. */
+                                    color:    #fff;
+                                }
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+        #gform_submit_button_1 {
+            background: transparent;
+            &:hover {
+                background: #ED0D27 !important;
+            }
+        }
+    }
+}
+#form-container-bg.is-desktop {
+    #form-container {
+        @media screen and (min-width: 1200px) {
+            z-index: 10;
+        }
+        @media screen and (min-width: 1200px) {
+            width: 1055px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 40px;
+            
+        }
+        .gform-body.gform_body {        
+            @media screen and (min-width: 1200px) {
+                transform: translateX(-2px);
+            }
+        }        
+        h2 {            
+            @media screen and (min-width: 1200px) {
+                font-size: 60px;
+                margin-bottom: 20px;
+                span.f-red {
+                    font-size: 60px;
+                }
+            }
+        }
+        span {                    
+            @media screen and (min-width: 1200px) {
+                font-size: 24px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            
+        }
+        #form-container-inside-2,
+        #form-container-inside {
+            @media screen and (min-width: 1200px) {
+                margin-top: 40px;
+            }            
+            .gform-body {
+                ul#gform_fields_1 {             
+                    @media screen and (min-width: 1200px) {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        column-gap: 40px;
+                        justify-content: space-between;
+                    }
+                    li {
+                        @media screen and (min-width: 1200px) {
+                            &#field_1_2,
+                            &#field_1_3,
+                            &#field_1_5,
+                            &#field_1_6 {
+                                width: calc(50% - 25px);
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                            }
+                            &#field_1_7 {
+                                width: 100%;
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        div {                        
+                            @media screen and (min-width: 1200px) {
+                                input {
+                                    height: 48px;
+                                }
+                                textarea {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
+#gform_wrapper_1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.full-width {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
 }

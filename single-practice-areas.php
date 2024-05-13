@@ -54,6 +54,7 @@
         <?php echo do_shortcode('[gravityform id="1"]'); ?>
     </div>
         <div class="caption">
+            
             <div class="image-part show-desktop">
                 <?php
                 if ($mobileImg != '' && $desktopImg == '') {
@@ -84,18 +85,27 @@
                 <?php
                 }
                 ?>
+            </div>            
+    </div>
+            <div class="caption2">
+            <?php the_content( ); ?>  
+            </div>       
+            <?php if ( ! empty( $categories ) ) { ?>
+            <div class="results-part show-mobile">
+                <?php echo do_shortcode('[results-ctl related_category="'.$categories[0]->term_id.'"]'); ?>
             </div>
-            <?php the_content( ); ?>            
+            <?php } ?>   
         </div>
-        <?php if ( ! empty( $categories ) ) { ?>
-        <div class="results-part ">
-            <?php echo do_shortcode('[results-ctl related_category="'.$categories[0]->term_id.'"]'); ?>
-        </div>
-        <?php } ?>
+        
     </div>    
     
     
 </div>
+    <?php if ( ! empty( $categories ) ) { ?>
+        <div class="results-part show-desktop">
+            <?php echo do_shortcode('[results-ctl related_category="'.$categories[0]->term_id.'"]'); ?>
+        </div>
+        <?php } ?>
     </div>
 </div>
 <?php get_footer(); ?>

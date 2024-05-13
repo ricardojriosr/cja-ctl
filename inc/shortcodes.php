@@ -403,7 +403,7 @@ function getAllAttorneys($attributes) {
 add_shortcode('attorneys','getAllAttorneys');
 
 function getTheFormForHome() {
-    $output = '<div id="form-container-bg">
+    $output = '<div id="form-container-bg" class="is-desktop">
     <div id="form-container">
         <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
         <span class="f-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</span>
@@ -527,6 +527,12 @@ function showTheResults($attributes) {
         endwhile;
         wp_reset_postdata(); 
         $output .= '</div>
+        </div>';
+    }
+    if (is_page( array(1434) )) {
+        $output .= '<div class="icons">
+        <img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
+        <a href="/contact" class="contactus btn red-btn f-black">Free Consultation</a>
         </div>';
     }
     return $output;
