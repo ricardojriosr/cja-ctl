@@ -1,7 +1,7 @@
 .hero-banner.hero-home {
     display: flex;
     max-height: max-content;
-    padding-top: 400px;
+    padding-top: 500px;
     flex-direction: column;
     vertical-align: bottom;
     align-items: baseline;
@@ -10,11 +10,11 @@
     background-repeat: no-repeat;
     background-position: center 120px;
     background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-mobile-homepage.png'); /* fallback */
-    background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-mobile-homepage.png'), linear-gradient(#000000 75%, #5D030E 85%, #000000 100%); /* W3C */
+    background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-mobile-homepage.png'), linear-gradient(#000000 450px, #5D030E 54%, #000000 75%); /* W3C */
     @media screen and (min-width: 1200px) {
         position: relative;            
         background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-desktop-homepage.png'); /* fallback */
-        background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-desktop-homepage.png'), linear-gradient(#000000 75%, #5D030E 85%, #000000 100%); /* W3C */
+        background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-desktop-homepage.png'), linear-gradient(#000000 75%, #5D030E 85%, #000000 80%); /* W3C */
         background-size: cover;
         height: 400px;     
         background-position: center -1vh;       
@@ -61,6 +61,12 @@
             font-weight: 700;
             font-size: 34px;
             text-transform: uppercase;
+            color: #FFF;
+            text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.50);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
             @media screen and (min-width: 1200px) {
                 display: none;
             }

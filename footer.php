@@ -19,12 +19,11 @@ if ((!is_front_page(  )) && ($showForm)) {
 ?>
 <div class="contact-form-container">
     <div id="google-maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754501.658071377!2d-75.67438275345958!3d42.379349611686216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3842beff2a1%3A0x6d809f893f412a57!2sCatalano%20Law!5e0!3m2!1sen!2sus!4v1714695373858!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754501.658071377!2d-75.67438275345958!3d42.379349611686216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3842beff2a1%3A0x6d809f893f412a57!2sCatalano%20Law!5e0!3m2!1sen!2sus!4v1714695373858!5m2!1sen!2sus" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
     </div>
 <div id="form-container-bg" class="no-home is-desktop">
     <div id="form-container">
-        <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
-        <span class="f-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</span>
+        <h2 class="uppercase f-white">How <span class="f-red">Can We Help?</span></h2>        
         <div id="form-container-inside"></div>
     </div>
 </div>

@@ -42,6 +42,10 @@ body {
     width: fit-content;
     transition: 0.3s;
     border-radius: 40px;
+    @media screen and (max-width: 1199px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .red-btn,
 .btn-red {
@@ -573,20 +577,27 @@ a.f-phone {
     justify-content: center;
     align-self: center;
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 35px;
     background: linear-gradient(to bottom, rgba(#000, 0.7), rgba(#000, 0.9)), url('/wp-content/themes/cja-ctl/assets/img/contact-box.png');
     margin: 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    @media screen and (min-width: 1500px) {
+    @media screen and (min-width: 1200px) {
         flex-direction: row;
-        max-width: 1400px;
+        max-width: 95%;
         margin-left: auto;
         margin-right: auto;
     }
+    @media screen and (min-width: 1500px) {
+        max-width: 1400px;
+    }
     #google-maps {
         padding: 20px;
+        border-radius: 15px;
+        iframe {
+            border-radius: 15px;
+        }
     }
     #form-container-bg {
         border-radius: 0;

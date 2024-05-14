@@ -94,7 +94,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     .container-site {
-        margin-top: 40px;
+        margin-top: 80px;
     }
 }
 
@@ -239,4 +239,82 @@
             }       
         }
     }
+    #form-container-bg.is-desktop {
+        #form-container {
+            max-width: 100%;
+            @media screen and (min-width: 1200px) {
+                max-width: 500px;
+                width: 500px;
+            }
+            @media screen and (min-width: 1500px) {
+                max-width: 600px;
+                width: 600px;
+            }
+        }
+    }
+    
 }   
+.search.search-results,
+.page-id-68 {
+    .hero-banner {
+        border-bottom: 10px solid #ED0D27;
+    }
+    .blog-container {
+        .post-item {
+            .caption {
+                padding-left: 40px !important;
+                padding-right: 40px !important;
+                h4 {
+                    color: #000;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                }
+                p.Light {
+                    color: #424242;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 200;
+                    line-height: normal;
+                    margin-top: 0;
+                }
+                p.excerpt {
+                    color: #000;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 200;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+#main-menu {
+    li {
+        a {
+            @media screen and (min-width: 1200px) {
+                font-size: 18px !important;
+            }
+            @media screen and (min-width: 1440px) {
+                font-size: 16px !important;
+            }
+            @media screen and (min-width: 1500px) {
+                font-size: 21px !important;
+            }
+        }
+    }
+}
+
+.badges-container {
+    justify-content: center !important;
+}
+
+// Mobile Amends
+@media screen and (max-width: 1199px) {
+    .LMobile {
+        font-size: 14px;
+        font-weight: 200;
+    }
+}
