@@ -481,6 +481,7 @@
     display: flex;
     flex-direction: column;
     color: white;
+    border-radius: 6px;
     @media screen and (min-width: 1200px) {
         margin: 20px;
     }
@@ -500,9 +501,18 @@
     }
     .left-part {
         text-align: center;
+        @media screen and (max-width: 1199px) {
+            padding-top: 40px;
+        }
         h2 {
-            font-size: 90px;
+            font-size: 128px;
             line-height: 80px;
+            @media screen and (min-width: 1200px) {
+                font-size: 128px;   
+            }
+        }
+        img {
+            height: 40px;
         }
         p {
             margin-top: 5px;
@@ -522,7 +532,10 @@
             margin-top: 20px;
             .testimonial {
                 padding: 20px;
-                margin-bottom: 40px; 
+                margin-bottom: 10px; 
+                @media screen and (min-width: 1200px) {
+                    margin-bottom: 40px; 
+                }
                 .caption {
                     line-height: 10px;
                 } 
@@ -540,9 +553,19 @@
                     p {
                         font-size: 30px;
                         font-weight: 700;
-                        line-height: 25px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        @media screen and (min-width: 1200px) {
+                            line-height: 25px;    
+                        }
                     }
-                }               
+                }     
+                .star-container {
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }          
             }
         }
         @media screen and (min-width: 1200px) { 
@@ -625,7 +648,7 @@
             display: flex;
             flex-basis: 100%;
             width: 100%;
-            min-height: 300px;
+            min-height: 400px;
             position: relative;            
             z-index: 0;
             border-bottom: 1px solid black;
@@ -739,7 +762,7 @@
             display: flex;
             flex-basis: 100%;
             width: 100%;
-            min-height: 300px;  
+            min-height: 400px;  
             position: relative;            
             z-index: 0;        
             border-bottom: 1px solid black;    
@@ -878,32 +901,36 @@
 }
 
 
-@media screen and (min-width: 1200px) {
+
     .home {
         #form-container-bg {
-            // transform: translateY(-300px);
-            // margin-bottom: -300px;
-            // position: relative;
-            // z-index: 2;
-            padding-bottom: 60px;
-            padding-top: 60px;            
-            background: linear-gradient(to bottom, rgba(#fff, 1), rgba(#fff, 0.2)),url('/wp-content/themes/cja-ctl/assets/img/home-mobile-bg-form.png');;
-            // &::after {
-            //     content: " ";
-            //     position: absolute;
-            //     top: 0; bottom: 0; left: 0; right: 0;
-            //     display: flex;
-            //     height: 100%;
-            //     width: 100%;
-            //     z-index: 2;
-            //     background: linear-gradient(to bottom, rgba(#fff,1) ,rgba(#fff,0.1));
-            // }
-            #form-container {
-                // margin-top: 250px;                
+            @media screen and (max-width: 1199px) {
+                padding-top: 60px;
             }
-        }
-    }    
-}
+            @media screen and (min-width: 1200px) {
+                // transform: translateY(-300px);
+                // margin-bottom: -300px;
+                // position: relative;
+                // z-index: 2;
+                padding-bottom: 60px;
+                padding-top: 60px;            
+                background: linear-gradient(to bottom, rgba(#fff, 1), rgba(#fff, 0.2)),url('/wp-content/themes/cja-ctl/assets/img/home-mobile-bg-form.png');;
+                // &::after {
+                //     content: " ";
+                //     position: absolute;
+                //     top: 0; bottom: 0; left: 0; right: 0;
+                //     display: flex;
+                //     height: 100%;
+                //     width: 100%;
+                //     z-index: 2;
+                //     background: linear-gradient(to bottom, rgba(#fff,1) ,rgba(#fff,0.1));
+                // }
+                #form-container {
+                    // margin-top: 250px;                
+                }
+            }
+        }    
+    }
 
 
 
@@ -924,6 +951,9 @@
         background: url('/wp-content/themes/cja-ctl/assets/img/pa-general-home.webp');
         background-repeat: no-repeat;
         background-size: cover;
+        @media screen and (min-width: 1200px) {
+            background-size: cover;
+        }
         background-position: center center;
         width: 100vw;
         position: relative;
@@ -1004,7 +1034,7 @@
                 }
                 &.slip {
                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.webp');                
-                    clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);
+                    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
                     z-index: 4;
                     position: relative;
                     transform: translateY(-60%);

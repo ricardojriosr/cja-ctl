@@ -317,4 +317,264 @@
         font-size: 14px;
         font-weight: 200;
     }
+    .home {
+        .badges-container {
+            .badges {
+                img {
+                    width: 150px;
+                    height: 150px;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }        
+    }
+    .practice-areas {
+        .caption {
+            p, h2 {
+                margin-left: 10px;
+                margin-right: 10px;
+            }            
+            p.f-white.uppercase.f-64.fw-700 {
+                font-size: 32px;
+                line-height: 30px;
+                margin-top: 8px;
+                margin-bottom: 15px;
+            }
+        }
+        .practice-areas-list {
+            .pa-item {
+                background-position: top center !important;
+                &.car {
+                    background-position: -40px center !important;
+                }
+                &.truck {
+                    background-position: 0px center !important;
+                }
+                &.motorcycle {
+                    background-position: -130px center !important;
+                }
+                &.slip {
+                    background-position: -150px center !important;
+                }
+            }
+        }
+    }
+    .faq-container {
+        .caption {
+            padding-left: 10px;
+            padding-right: 10px;
+            .faq-list { 
+                margin-top: 20px;   
+                margin-bottom: 20px;            
+                ul {
+                    li {
+                        min-height: 70px;
+                        .title {
+                            font-size: 24px;
+                        }
+                    }
+                }
+                .faq-link {
+                    margin-top: 20px;   
+                }
+            }
+        }
+    }
+    .page-id-140 {
+        .container-site {
+            .hero-banner {
+                .caption-hero { 
+                    flex-direction: column-reverse;
+                }
+            }
+            .faq-container {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 0;
+            }
+        }
+        
+    }
+    .practice-areas-template-default,
+    .page-template.page-template-page-overlay {
+        .container-site {
+            .hero-banner {
+                .caption-hero { 
+                    padding-top: 50px;     
+                    p {                   
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }           
+                }
+            }
+            .results-part {
+                padding-top: 0;
+                margin-top: 0;
+                .results-list {
+                    padding-top: 0;
+                    .result-item {
+                        h2 {
+                            font-size: 48px;
+                        }
+                        p {
+                            font-size: 20px !important;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .page-id-144 {
+        .hero-banner {
+            .caption-hero {
+                h1 {
+                    font-size: 48px;
+                }
+                h2 {
+                    font-size: 24px;
+                }
+                p {                   
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .postid-152 {
+        .hero-banner {
+            .caption-hero {
+                h1 {
+                    font-size: 65px;
+                    span {
+                        font-size: 32px !important;
+                    }
+                }
+                p {                   
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .caption2 {
+        h1 {
+            font-size: 42px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+        h3 {
+            font-size: 32px;
+        }
+        h4 {
+            font-size: 30px;
+        }
+        h5 {
+            font-size: 28px;
+        }
+        h6 {
+            font-size: 26px;
+        }
+        p {
+            font-weight: 300;
+        }
+    }
+
+    .post-template-default.single.single-post  {
+        .hero-banner {
+            .caption-hero {
+                padding-top: 50px;
+                h1 {
+                    font-size: 35px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+    .container-attorneys {
+        .main-attorney {
+            .caption {
+                .d-flex.flex-column {
+                    flex-direction: column-reverse;
+                    display: flex;
+                }
+                .occupation {
+                    font-size: 14px;
+                }
+                h2.attorney-title {
+                    font-size: 38px;
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                }
+                a {
+                    margin-top: 8px;
+                    margin-left: 0;
+                }
+            }
+        }
+        .secondary-attorney {
+            .caption {
+                .occupation {
+                    font-size: 14px;
+                }
+                h2.attorney-title {
+                    font-size: 38px;
+                    margin-top: 12px;
+                    margin-bottom: 12px;
+                }
+                a {
+                    margin-top: 8px;
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+            }
+            &:nth-child(even) {
+                .caption {
+                    a {                         
+                        margin-left: 0;
+                        margin-right: auto;
+                    }   
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-attorneys {
+        .secondary-attorney {
+            .caption.f-white {      
+                left: 0 !important;
+                right: auto !important;                          
+                a {     
+                    margin-top: 10px;                    
+                    margin-left: 0;
+                    margin-right: auto;
+                }                  
+            }
+            &:nth-child(odd) {
+                .caption.f-white {
+                    left: auto !important;
+                    right: 0 !important;
+                    span, h2 {
+                        text-align: right;
+                        align-self: flex-end;
+                        align-items: flex-end;
+                    }
+                    a {
+                        margin-top: 10px;
+                        margin-right: 0;
+                        margin-left: auto;
+                    }  
+                }
+            }
+        }
+    }
 }

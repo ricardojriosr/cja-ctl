@@ -23,7 +23,7 @@ if ((!is_front_page(  )) && ($showForm)) {
     </div>
 <div id="form-container-bg" class="no-home is-desktop">
     <div id="form-container">
-        <h2 class="uppercase f-white">How <span class="f-red">Can We Help?</span></h2>        
+        <h2 class="uppercase f-white">How <span class="f-red-gradient">Can We Help?</span></h2>        
         <div id="form-container-inside"></div>
     </div>
 </div>
