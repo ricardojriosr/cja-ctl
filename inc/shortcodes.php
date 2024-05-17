@@ -4,13 +4,15 @@ function homePageBanner($attributes) {
     $output = '<!-- First Block -->
     <div class="hero-banner hero-home">
         <div class="caption-banner-att">
-            <span><h3>Peter Catalano</h3>Attorney &amp; Founder</span>
+            <span><h3 class="fm-28">Peter Catalano</h3><span class="LMobile">Attorney &amp; Founder</span></span>
             <div class="slogan-mobile">Experienced.<br>Compassionate.<br>Tough.
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
                 <a href="/contact" class="contactus btn red-btn">Contact Us</a><img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
             </div>
             <div class="slogan-desktop">
-                <h1>We`ve won <span class="red">Millions</span><span class="move">for our clients</span></h1>
+                <h1>We`ve won
+                <span class="red show-desktop-important">Millions</span>
+                <span class="move show-desktop-important">for our clients</span></h1>
                 <div class="icons">
                     <img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
                     <a href="/contact" class="contactus btn red-btn">Contact Us</a>
@@ -140,7 +142,7 @@ function getFAQList($attributes) {
                                 while ( $loop->have_posts() ) : $loop->the_post(); 
         $output .=                  "<li id='faq-".$counter."'>
                                         <div class='title f-32'>
-                                            " . get_the_title() . "<a href='javascript:void(0)' data-count='".$counter."' onclick='faqShowThis(this);' class='faq-link-arrow' id='faq-link-".$counter."'><img src='/wp-content/themes/cja-ctl/assets/img/faq-icon.png' alt='FAQ icon'></a>
+                                            " . get_the_title() . "<a href='javascript:void(0)' data-count='".$counter."' onclick='faqShowThis(this);' class='faq-link-arrow' id='faq-link-".$counter."'><img src='/wp-content/themes/cja-ctl/assets/img/faq-icon.png' alt='FAQ icon' class='faq-icon-arrow'></a>
                                         </div>
                                         <div class='faq-caption-hide' id='faq-caption-".$counter."'>
                                         ".get_the_content()."
@@ -420,7 +422,7 @@ function getPracticeAreasHome() {
         $output = '<div class="practice-areas">
         <div class="bg-pa">
             <div class="caption">
-                <h2 class="f-red uppercase f-150">Practice Areas</h2>
+                <h2 class="f-red uppercase f-150 f-red-gradient-m">Practice Areas</h2>
                 <p class="f-white uppercase f-64 fw-700">Here to Help</p>
                 <p class="f-white p-f-36">Catalano Law has a strong record of helping victims in all kinds of personal injury and accident cases. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="/practice-areas" class="btn btn-red f-white mt-40">All Practice Areas</a>

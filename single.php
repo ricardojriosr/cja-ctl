@@ -90,7 +90,9 @@
                 }
                 ?>
             </div>
+            <div class="caption2">
             <?php the_content( ); ?>            
+            </div>
         </div>
         <?php if ( ! empty( $categories ) ) { ?>
         <div class="results-part show-desktop">

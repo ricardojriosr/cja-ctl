@@ -64,7 +64,7 @@ if (has_post_thumbnail(  )) {
             echo $teamTitle;
             ?>
         </h2>
-        <p class="f-black">
+        <p class="f-black p-phone">
             <?php
             $pNumber = get_field('phone');
             if ($pNumber != '') {

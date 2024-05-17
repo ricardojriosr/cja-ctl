@@ -301,7 +301,15 @@ h2.attorney-title {
 .f-red-gradient {
     background: -webkit-linear-gradient(139deg, #ED0D27 39.58%, #C9051C 67.86%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;    
+}
+
+.f-red-gradient-m {
+    background: linear-gradient(139deg, #ED0D27 39.58%, #C9051C 67.86%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .f-left {
