@@ -11,7 +11,7 @@ function homePageBanner($attributes) {
             </div>
             <div class="slogan-desktop">
                 <h1>We`ve won
-                <span class="red show-desktop-important">Millions</span>
+                <span class="red show-desktop-important fw-800">Millions</span>
                 <span class="move show-desktop-important">for our clients</span></h1>
                 <div class="icons">
                     <img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
@@ -34,28 +34,28 @@ function caseResultsHome($attributes) {
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
                 <h2>$2.3 <span>Million</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6 class="f-32">Car Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="f-32 Light">Car Accident Settlement</h6>
                 </div>
                 <div class="diagonal-box"></div>
             </div>            
         </div>
         <div class="right-part">
             <div class="case-1">
-                <h2 class="f-96">$1.9 <span>Million</span></h2>
+                <h2 class="f-case-results">$1.9 <span>Million</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Worksite Accident &amp; Injuries</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Worksite Accident &amp; Injuries</h6>
                 </div>
             </div>
             <div class="case-2">
-                <h2 class="f-96">$950 <span>Thousand</span></h2>
+                <h2 class="f-case-results">$950 <span>Thousand</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Car Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Car Accident Settlement</h6>
                 </div>
             </div>
             <div class="case-3">
-                <h2 class="f-96">$325 <span>Thousand</span></h2>
+                <h2 class="f-case-results">$325 <span>Thousand</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Motorcycle Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Motorcycle Accident Settlement</h6>
                 </div>
             </div>
             <div class="link">
@@ -196,7 +196,7 @@ function gavelBannerHome() {
     $output = '<div class="flex-responsive flex-middle success">
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/gavel-solid.png" alt="50 Years Experience">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/gavel-solid.svg" alt="50 Years Experience">
         </div>
         <div class="caption">
             <h2>50+ Years</h2>
@@ -205,7 +205,7 @@ function gavelBannerHome() {
     </div>
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/scales-solid.png" alt="12000+ Cases Handled">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/scales-solid.svg" alt="12000+ Cases Handled">
         </div>
         <div class="caption">
             <h2>12,000+</h2>
@@ -214,7 +214,7 @@ function gavelBannerHome() {
     </div>
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/awards-solid.png" alt="95% Success">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/awards-solid.svg" alt="95% Success">
         </div>
         <div class="caption">
             <h2>95% Success</h2>
@@ -362,8 +362,10 @@ function getAllAttorneys($attributes) {
                             <img src="'.get_field('mobile_image').'" class="att-img" alt="'.get_the_title().'" style="width:auto;">
                         </picture>
                         <div class="caption f-white">
-                            <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>
-                            <h2  class="attorney-title">'.get_the_title().'</h2>
+                            <div class="reverse-desktop">
+                                <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>
+                                <h2  class="attorney-title">'.get_the_title().'</h2>
+                            </div>
                             <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                         </div>
                     </div>';
@@ -376,8 +378,10 @@ function getAllAttorneys($attributes) {
                                     <source media="(min-width:1200px)" srcset="'.get_field('desktop_image').'">
                                     <img src="'.get_field('mobile_image').'" class="att-img" alt="'.get_the_title().'" style="width:auto;">
                                     <div class="caption f-white">
-                                        <span class="uppercase Bold">'.implode(" & ",$titlesArray).'</span>
-                                        <h2 class="attorney-title">'.get_the_title().'</h2>
+                                        <div class="reverse-desktop">
+                                            <span class="uppercase Bold">'.implode(" & ",$titlesArray).'</span>
+                                            <h2 class="attorney-title">'.get_the_title().'</h2>
+                                        </div>
                                         <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                                     </div>
                                 </div>';
@@ -408,7 +412,7 @@ function getTheFormForHome() {
     $output = '<div id="form-container-bg" class="is-desktop">
     <div id="form-container">
         <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
-        <span class="f-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</span>
+        <div class="form-caption"><p class="text-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</p></div>
         <div id="form-container-inside"></div>
     </div>
 </div>';

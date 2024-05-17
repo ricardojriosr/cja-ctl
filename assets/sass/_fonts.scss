@@ -325,3 +325,33 @@ h2.attorney-title {
         }
     }
 }
+
+.text-white {
+    color: white !important;
+}
+
+h2.f-case-results {
+    font-size: 54px !important;
+    span {
+        font-size: 54px !important;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 4vw !important;
+        span {
+            font-size: 4vw !important;
+        }
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 70px !important;
+        span {
+            font-size: 70px !important;
+        }
+    }
+}
+
+.h6-20 {
+    font-size: 20px;
+    @media screen and (min-width: 1200px) {
+        font-size: 28px;
+    }
+}
