@@ -9,8 +9,8 @@
     background: #000000;
     background-repeat: no-repeat;
     background-position: center 120px;
-    background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-mobile-homepage.png'); /* fallback */
-    background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-mobile-homepage.png'), linear-gradient(#000000 450px, #5D030E 54%, #000000 75%); /* W3C */
+    background-image: url('/wp-content/themes/cja-ctl/assets/img/mobile-header-hero.png'); /* fallback */
+    background-image: url('/wp-content/themes/cja-ctl/assets/img/mobile-header-hero.png'), linear-gradient(#000000 450px, #5D030E 54%, #000000 75%); /* W3C */
     @media screen and (min-width: 1200px) {
         position: relative;            
         background-image: url('/wp-content/themes/cja-ctl/assets/img/hero-desktop-homepage.png'); /* fallback */

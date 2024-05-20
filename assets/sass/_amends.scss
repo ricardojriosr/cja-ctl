@@ -9,6 +9,15 @@
 }
 .post-type-archive-practice-areas,
 .page-id-1434 {
+    @media screen and (max-width: 1199px) {
+        .container-site {
+            .hero-banner {
+                .caption-hero {
+                    transform: translateY(0px) !important;
+                }
+            }
+        }
+    }
     @media screen and (min-width: 1200px) {
         .container-site {
             .hero-banner {
@@ -318,6 +327,20 @@
         font-weight: 200;
     }
     .home {
+        h1 {
+            line-height: 50px;
+            margin-bottom: 40px;
+            .move-left {
+                text-align: left;
+                display: flex;
+            }
+            .move-right {
+                text-align: right;
+                display: flex;
+                justify-content: flex-end;
+                line-height: 30px;
+            }
+        }        
         .badges-container {
             .badges {
                 img {
@@ -704,6 +727,39 @@
 
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        .container-site {
+            .hero-banner.hero-home {
+                padding-top: 460px;
+                .caption-banner-att {                                     
+                    h1 {
+                        transform: translateY(-20px);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .post-template-default.single.single-post {
+        h1 {
+            font-size: 100px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single {
+        #form-container-bg #form-container .form-caption {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }

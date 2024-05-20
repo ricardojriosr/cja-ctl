@@ -4,8 +4,13 @@ function homePageBanner($attributes) {
     $output = '<!-- First Block -->
     <div class="hero-banner hero-home">
         <div class="caption-banner-att">
-            <span><h3 class="fm-28">Peter Catalano</h3><span class="LMobile">Attorney &amp; Founder</span></span>
-            <div class="slogan-mobile">Experienced.<br>Compassionate.<br>Tough.
+            <span class="m-title-home-banner"><h3 class="fm-28">Peter Catalano</h3><span class="LMobile">Attorney &amp; Founder</span></span>
+            <div class="slogan-mobile">
+            <h1 class="uppercase f-white fm-35">
+            <span class="move-left fm-35">we’ve won</span>
+            <span class="f-red fm-70">millions</span>
+            <span class="move-right fm-35">for our clients</span>
+            </h1>
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
                 <a href="/contact" class="contactus btn red-btn">Contact Us</a><img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
             </div>

@@ -52,7 +52,7 @@
             <div id="form-container-bg" class="no-home">
                 <div id="form-container">
                 <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
-                <span class="f-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</span>
+                <div class="form-caption"><p class="text-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</p></div>
                 <div id="form-container-inside"></div>
             </div>
         </div>

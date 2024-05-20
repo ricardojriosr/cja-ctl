@@ -1,0 +1,117 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+        .logo {
+            a {
+                max-width: 300px;
+            }
+        }
+    }
+    .attorney-block {
+        .container-attorneys {
+            flex-direction: row;
+            flex-wrap: wrap;
+            h2.uppercase.h2-attorney {
+                width: 100%;
+                flex-basis: 100%;
+            }
+            .secondary-attorney {
+                width: 50%;
+                flex-basis: 50%;                
+            }
+            .main-attorney {
+                flex-grow: 1;
+            }
+        }
+    }
+    .page-id-144 {
+        .contact-form-container {
+            flex-direction: row;
+        }
+    }
+    .home {
+        .m-title-home-banner {
+            position: absolute;
+            z-index: 4;
+            right: 20px;
+            bottom: 20px;
+        }
+        .case-results {
+            .left-part {
+                h2 {
+                    font-size: 85px;
+                    span {
+                        font-size: 85px;
+                    }
+                }
+            }
+            .right-part {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+        .were-you-injured {
+            .image {
+                background-position: center -80px;
+            }
+            .r-caption {
+                padding-left: 60px;
+                padding-right: 60px;
+                .title {
+                    .f-100.h2-injured {
+                        line-height: 60px;
+                        font-size: 60px;
+                        span.f-red {
+                            font-size: 85px;
+                        }
+                    }
+                }
+            }
+        }
+        .badges-container {
+            .badges {
+                width: calc(20% - 50px);
+                flex-basis: calc(20% - 50px);
+            }
+        }
+        .success {
+            flex-direction: row;
+        }
+        .hero-banner.hero-home {
+            background-size: cover !important;
+            min-height: 500px;
+        }
+        .hero-banner.hero-home::after {
+            content: none;
+        }
+        .ctlwinsimg {
+            max-width: 500px !important;            
+        }
+        .caption-banner-att {
+            position: relative;
+            z-index: 1;
+            min-height: 300px;
+            height: 300px;
+            &::after {
+                z-index: 2;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                content: " ";
+                background: linear-gradient(to bottom, rgba(#000,0), rgba(#000,45));
+            }
+            .slogan-mobile {
+                position: absolute;
+                z-index: 3;
+            }
+        }
+        .faq-container {
+            margin-top: 350px;
+        }
+    }
+}

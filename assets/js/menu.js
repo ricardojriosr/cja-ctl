@@ -35,7 +35,7 @@ if (menuA) {
 
     if (caretArrows) {
         [].forEach.call(caretArrows, function(caret) {
-            caret.addEventListener("click", function(e) {
+            caret.addEventListener("click", function(e) {                
                 if (e.target.parentNode.children[2].style.display == 'flex') {
                     e.target.parentNode.children[2].style.display = 'none';
                 } else {
@@ -79,6 +79,11 @@ if (menuB) {
     if (subMenuMobile) {
         [].forEach.call(subMenuMobile, function(caretOption) {
             caretOption.addEventListener("click", function(e) {
+                var allToggles = document.querySelectorAll('.add-bg');
+                [].forEach.call(allToggles, function(tGle) {
+                    tGle.classList.remove('add-bg');
+                });
+                e.target.parentNode.classList.toggle('add-bg');
                 e.preventDefault();
                 var theSubMenu = e.target.parentNode.children[2];
                 theSubMenu.classList.toggle("is-visible");
