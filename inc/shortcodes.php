@@ -427,8 +427,9 @@ add_shortcode('contact-ctl','getTheFormForHome');
 
 function getPracticeAreasHome() {
     $output = '';
-
-        $output = '<div class="practice-areas">
+        $useOld = false;
+        
+        $output1 = '<div class="practice-areas">
         <div class="bg-pa">
             <div class="caption">
                 <h2 class="f-red uppercase f-150 f-red-gradient-m">Practice Areas</h2>
@@ -438,7 +439,7 @@ function getPracticeAreasHome() {
             </div>
         </div>
         <div class="practice-areas-list">
-            <a class="pa-item car no-hover" href="/practice-areas/car-accidents/">
+            <a class="pa-item car " href="/practice-areas/car-accidents/" id="pa-1">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Car<br>Accident</p>
@@ -450,7 +451,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item motorcycle is-hover" href="/practice-areas/motorcycle-accidents/">
+            <a class="pa-item motorcycle " href="/practice-areas/motorcycle-accidents/"  id="pa-2">
                 <div class="caption">   
                     <div class="line-red"></div>
                     <p class="f-white">Motorcycle<br>Accident</p>
@@ -462,7 +463,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item truck no-hover" href="/practice-areas/truck-accidents/">
+            <a class="pa-item truck " href="/practice-areas/truck-accidents/"  id="pa-3">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Truck<br>Accident</p>
@@ -474,7 +475,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item slip no-hover" href="/practice-areas/slip-and-fall-injuries/">
+            <a class="pa-item slip " href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Slip<br>and Fall</p>
@@ -488,7 +489,124 @@ function getPracticeAreasHome() {
             </a>
         </div>
     </div>';
+
     
+
+    $output2 = '
+    <div class="practice-areas2">
+        <div class="pa2-bg">
+            <div class="caption">
+                <h2 class="f-red uppercase f-150 f-red-gradient-m">Practice Areas</h2>
+                <p class="f-white uppercase f-64 fw-700">Here to Help</p>
+                <p class="f-white p-f-36">Catalano Law has a strong record of helping victims in all kinds of personal injury and accident cases. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="/practice-areas" class="btn btn-red f-white mt-40">All Practice Areas</a>
+            </div>
+            <div class="practice-areas2-list show-mobile">
+                <a class="pa-item car " href="/practice-areas/car-accidents/" id="pa-1">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Car<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Car Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item motorcycle " href="/practice-areas/motorcycle-accidents/"  id="pa-2">
+                    <div class="caption">   
+                        <div class="line-red"></div>
+                        <p class="f-white">Motorcycle<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Motorcycle Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item truck " href="/practice-areas/truck-accidents/"  id="pa-3">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Truck<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Truck Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item slip " href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Slip<br>and Fall</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Slip and Fall</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst.</p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="practice-areas3-list show-desktop">
+                <a class="pa-item car to-hover hovered" href="/practice-areas/car-accidents/" id="pa-1">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Car<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Car Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item motorcycle to-hover no-hovered" href="/practice-areas/motorcycle-accidents/"  id="pa-2">
+                    <div class="caption">   
+                        <div class="line-red"></div>
+                        <p class="f-white">Motorcycle<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Motorcycle Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item truck to-hover no-hovered" href="/practice-areas/truck-accidents/"  id="pa-3">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Truck<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Truck Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item slip to-hover no-hovered" href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Slip<br>and Fall</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Slip and Fall</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst.</p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    ';
+    
+    if ($useOld) { $output = $output1; }
+    if (!$useOld) { $output = $output2; }
     return $output;
 }
 add_shortcode('practice-areas-ctl','getPracticeAreasHome');

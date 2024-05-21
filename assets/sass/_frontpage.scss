@@ -936,9 +936,7 @@
         }    
     }
 
-
-
-.practice-areas {    
+.practice-areas2 { 
     width: 100vw;
     display: flex;
     flex-direction: column;    
@@ -947,12 +945,11 @@
     z-index: 1;
     transform: translateY(-430px);
     margin-bottom: -430px;
-    @media screen and (min-width: 1200px) {
-        z-index: 1;
-    }
-    .bg-pa {
+    .pa2-bg {
         padding-top: 430px;
         background: url('/wp-content/themes/cja-ctl/assets/img/pa-mobile-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
         @media screen and (min-width: 1200px) {
             background: url('/wp-content/themes/cja-ctl/assets/img/pa-general-home.webp');
         }
@@ -964,7 +961,7 @@
         background-position: center center;
         width: 100vw;
         position: relative;
-        border-top: 4px solid #ED0D27;
+        border-top: 6px solid #ED0D27;
         &::after {
             content: " ";
             position: absolute;
@@ -995,225 +992,690 @@
                 line-height: 30px;
             }
         }
-    }
-    .practice-areas-list {
-        $paMinHeight: 500px;
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        padding-top: 60px;
-        background: linear-gradient(to bottom, rgba(#4d030b,1), rgba(#4d030b,0),);        
-        @media screen and (min-width: 1200px) {
-            flex-direction: row;            
-            max-width: none;                      
-            min-height: $paMinHeight;
-        }        
-        @media screen and (max-width: 1199px) {
-            margin-bottom: -60%;
-        }
-        .pa-item {
-            background-position: top center;
-            background-size: cover !important;
-            background-repeat: no-repeat;          
-            @media screen and (max-width: 1199px) {
+        .practice-areas2-list {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -320px;
+            @media screen and (min-width: 1200px) {
+                margin-bottom: 20px;
+            }
+            .pa-item {
+                text-decoration: none;
                 width: 100%;
                 min-height: 100px;
-                height: 400px;                
+                height: 400px;
                 &.car {
                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.webp');
                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);  
-                    z-index: 1;
+                    z-index: 1;                    
                     position: relative;                                      
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
                 }
                 &.motorcycle {
                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.webp');                
                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);                   
                     z-index: 2;
-                    position: relative;
+                    position: relative;                    
                     transform: translateY(-20%);
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
                 }
                 &.truck {
                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.webp');                                
                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);
                     z-index: 3;
-                    position: relative;
+                    position: relative;                    
                     transform: translateY(-40%);
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
                 }
                 &.slip {
                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.webp');                
                     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
                     z-index: 4;
-                    position: relative;
-                    transform: translateY(-60%);
-                }  
-            }
-            @media screen and (min-width: 1200px) {                         
-                min-height: $paMinHeight;
-                width: 25%;
-                position: absolute;
-            }
-            .caption {
-                position: absolute;
-                top: 60px;
-                left: 20px;
-                right: 20px;
-                min-height: 50px;
-                z-index: 3;
-                display: flex;
-                flex-direction: row;
-                text-decoration: none;
-                vertical-align: middle;   
-                align-items: center;
-                text-decoration: none;
-                column-gap: 10px;       
-                cursor: pointer;      
-                .line-red {
-                    max-height: 2px;
-                    cursor: pointer;
-                }
-                .line-red2 {
-                    width: 60%;
-                    max-width: 100%;
+                    position: relative;                    
+                    transform: translateY(-60%);                    
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat;                     
+                }                  
+                .caption2 {
                     display: none;
                 }
-                p {
-                    font-weight: 300;
-                    line-height: 18px;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    cursor: pointer;
-                }
-            }
-            .caption2 {
-                display: none;
-                flex-direction: column;
-                left: 10px;
-                right: 10px;
-                bottom: 10px;
-                top: 10px;
-                max-width: 100%;                
-                height: inherit;
-                width: inherit;
-                position: absolute;
-                color: white;                
-                vertical-align: bottom;
-                align-items: flex-start;
-                justify-content: end;
-                z-index: 3;
-                padding: 20px;
-                span {
+                .caption {
+                    position: absolute;
+                    top: 60px;
+                    left: 20px;
+                    right: 20px;
+                    min-height: 50px;
+                    z-index: 3;
                     display: flex;
                     flex-direction: row;
-                    vertical-align: middle;
+                    text-decoration: none;
+                    vertical-align: middle;   
                     align-items: center;
-                    column-gap: 20px;
-                    img {
-                        transform: rotate(270deg);
+                    text-decoration: none;
+                    column-gap: 10px;     
+                    text-align: left;
+                    justify-content: flex-start;  
+                    cursor: pointer;      
+                    .line-red {
+                        max-height: 2px;
+                        cursor: pointer;
                     }
-                }
-                p {
-                    font-size: 18px;
-                    line-height: 19px;
-                }
-                h2 {
-                    font-size: 40px;
-                    line-height: 44px;
-                    margin-top: 4px;
-                    margin-bottom: 4px;
-                }         
+                    .line-red2 {
+                        width: 60%;
+                        max-width: 100%;
+                        display: none;
+                    }
+                    p {
+                        font-weight: 300;
+                        line-height: 18px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                    }
+                }  
+                          
             }
             @media screen and (min-width: 1200px) {
-                &.car {
-                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.jpg');                
-                    left: 0;                    
-                    z-index: 1;
-                    width: 32%;                                                
-                    &:hover {
-                        background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.jpg');                
+                flex-direction: row;                
+            }
+        }
+        .practice-areas3-list {
+            display: flex;
+            flex-direction: row; 
+            position: relative;
+            z-index: 1;           
+            .pa-item {                
+                text-decoration: none;
+                color: white;
+                position: relative;
+                z-index: 2;                       
+                display: flex;    
+                flex-direction: column; 
+                max-width: 100%;
+                min-height: 600px;  
+                $degreesRotate: 180deg;                                
+                .caption {
+                    position: absolute;
+                    top: 60px;
+                    left: 20px;
+                    right: 20px;
+                    min-height: 50px;
+                    z-index: 3;
+                    display: flex;
+                    flex-direction: row;
+                    text-decoration: none;
+                    vertical-align: middle;   
+                    align-items: center;
+                    text-decoration: none;
+                    column-gap: 10px;
+                    text-align: left;
+                    justify-content: flex-start;         
+                    cursor: pointer;      
+                    .line-red {
+                        max-height: 2px;
+                        cursor: pointer;
                     }
+                    .line-red2 {
+                        width: 60%;
+                        max-width: 100%;
+                        display: none;
+                    }
+                    p {
+                        font-weight: 300;
+                        line-height: 18px;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        cursor: pointer;
+                    }
+                }
+                .caption2 {
+                    display: none;
+                    flex-direction: column;
+                    left: 10px;
+                    right: 10px;
+                    bottom: 10px;
+                    top: 10px;
+                    max-width: 100%;                
+                    height: inherit;
+                    width: inherit;
+                    position: absolute;
+                    color: white;                
+                    vertical-align: bottom;
+                    align-items: flex-start;
+                    justify-content: end;
+                    z-index: 3;
+                    padding: 20px;
+                    span {
+                        display: flex;
+                        flex-direction: row;
+                        vertical-align: middle;
+                        align-items: center;
+                        column-gap: 20px;
+                        img {
+                            transform: rotate(270deg);
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 19px;
+                    }
+                    h2 {
+                        font-size: 40px;
+                        line-height: 44px;
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+                    }         
+                }
+                &.car {
+                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.webp');                    
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;                     
+                    z-index: 1;
+                    left: 0;
+                    width: 30%;
+                    flex-basis: 30%;                    
+                    &:hover{
+                        clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%); 
+                        width: 40%;
+                        flex-basis: 40%;
+                        z-index: 10;
+                        .caption {
+                            .line-red2 {
+                                display: block;
+                            }
+                        }
+                        .caption2 {
+                            left: 40px;
+                        }
+                    }   
+                        
                 }
                 &.motorcycle {
-                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.jpg');                
+                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.webp');                                    
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
                     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-                    left: 20%;                    
+                    position: absolute; 
                     z-index: 2;
-                    width: 32%;                       
+                    left: 20%;
+                    width: 35%;
+                    flex-basis: 35%;
                     .caption {
-                        left: 20%;
-                    }
-                    .caption2 {
-                        left: 15%;
+                        left: 120px;
                     }
                     &:hover {
-                        background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.jpg');                
-                    }
+                        clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%); 
+                        width: 40%;
+                        flex-basis: 40%;
+                        z-index: 10;
+                        .caption {
+                            left: 140px;
+                            .line-red2 {
+                                display: block;
+                            }
+                        }
+                        .caption2 {
+                            left: 140px;
+                        }
+                    }   
+                        
                 }
                 &.truck {
-                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.jpg');                                
+                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.webp');                                                    
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat; 
                     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-                    left: 45%;                    
+                    position: absolute; 
                     z-index: 3;
-                    width: 32%;                     
+                    left: 45%;
+                    width: 35%;
+                    flex-basis: 35%;  
                     .caption {
-                        left: 20%;
-                    }
-                    .caption2 {
-                        left: 15%;
-                    }
-                    &:hover {
-                        left: 43%;
-                        background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.jpg');                
-                    }
+                        left: 120px;
+                    }                  
+                    &:hover{
+                        clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%); 
+                        width: 40%;
+                        flex-basis: 40%;
+                        z-index: 10;
+                        .caption {
+                            .line-red2 {
+                                display: block;
+                            }
+                        }
+                        .caption2 {
+                            left: 110px;
+                        }
+                    }   
+                        
                 }
                 &.slip {
-                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.jpg');                
-                    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
-                    left: 70%;
-                    z-index: 4;                    
-                    width: 32%;                         
+                    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.webp');                                    
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat;                         
+                    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);            
+                    position: absolute; 
+                    z-index: 4;
+                    left: 72%;
+                    width: 30%;
+                    flex-basis: 30%;
                     .caption {
-                        left: 20%;
-                    }
-                    .caption2 {
-                        left: 15%;
-                    }
+                        left: 100px;
+                    }  
                     &:hover {
-                        left: 68%;
-                        background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.jpg');                
-                    }
-                }   
-                
-            }
-            @media screen and (min-width: 1200px) {
-                transition: 0.3s;
-                &:hover { 
-                    width: 42%;
-                    z-index: 5;                    
-                    clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);  
-                    .caption {
-                        .line-red2 {
-                            display: block;
+                        width: 50%;
+                        flex-basis: 50%;
+                        z-index: 10;
+                        left: 65%;
+                        .caption {
+                            left: 150px;
+                            max-width: 60%;
+                            .line-red2 {
+                                display: block;
+                            }
                         }
-                    }             
+                        .caption2 {
+                            left: 100px;
+                        }
+                    }   
+                       
+                }     
+                &:hover {
                     .caption2 {
-                        display: flex; 
-                    }                    
-                }   
-                &.car:hover {                               
-                    width: 40%;
-                    z-index: 5;  
-                    left: 0;                  
-                    clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%);               
-                    .caption2 {
-                        display: flex; 
+                        display: flex;
                     }
                 }
             }
-            
         }
-        
+        $calculatedNohovered: 33%;
+        // 1
+        .pa-item.car:hover ~ .pa-item.motorcycle{
+            left: 30%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+            .caption {
+                left: 160px;
+            }
+        }
+        .pa-item.car:hover ~ .pa-item.truck{
+            left: 55%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+            .caption {
+                left: 110px;
+            }
+        }
+        .pa-item.car:hover ~ .pa-item.slip{
+            left: 78%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            .caption {
+                left: 110px;
+            }
+        }
+        // 2
+        .pa-item.motorcycle:hover ~ .pa-item.car{
+            left: 35%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        }
+        .pa-item.motorcycle:hover ~ .pa-item.truck{
+            left: 52%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+            .caption {
+                left: 130px;
+            }
+        }
+        .pa-item.motorcycle:hover ~ .pa-item.slip{
+            left: 78%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            .caption {
+                left: 110px;
+            }
+        }
+        // 3
+        .pa-item.truck:hover ~ .pa-item.car{
+            left: 35%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        }
+        .pa-item.truck:hover ~ .pa-item.motorcycle{
+            left: 60%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        }
+        .pa-item.truck:hover ~ .pa-item.slip{
+            left: 75%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            .caption {
+                left: 160px;
+            }
+        }
+        // 4
+        .pa-item.slip:hover ~ .pa-item.car{
+            left: 35%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        }
+        .pa-item.slip:hover ~ .pa-item.motorcycle{
+            left: 60%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);
+        }
+        .pa-item.slip:hover ~ .pa-item.truck{
+            left: 80%;
+            width: $calculatedNohovered;
+            flex-basis: $calculatedNohovered;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        }
     }
 }
+
+// .practice-areas {    
+//     width: 100vw;
+//     display: flex;
+//     flex-direction: column;    
+//     min-height: 600px;
+//     position: relative;
+//     z-index: 1;
+//     transform: translateY(-430px);
+//     margin-bottom: -430px;
+//     @media screen and (min-width: 1200px) {
+//         z-index: 1;
+//     }
+//     .bg-pa {
+//         padding-top: 430px;
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//         background: url('/wp-content/themes/cja-ctl/assets/img/pa-mobile-bg.png');
+//         background-position: center center;
+//         width: 100vw;
+//         position: relative;
+//         border-top: 4px solid #ED0D27;
+//         @media screen and (min-width: 1200px) {
+//             background: url('/wp-content/themes/cja-ctl/assets/img/pa-general-home.webp');        
+//             background-size: cover;
+//         }
+//         &::after {
+//             content: " ";
+//             position: absolute;
+//             display: flex;
+//             height: 100%;
+//             width: 100%;
+//             top: 0; bottom: 0; left: 0; right: 0;
+//             background: linear-gradient(to bottom, rgba(#000,1) 15%, rgba(#000,0.6) 50%, rgba(#4d030b,0.6) 75%, rgba(#4d030b,1) 100%);
+//         }
+//         .caption {
+//             position: relative;
+//             z-index: 3;
+//             padding: 20px;
+//             display: flex;
+//             flex-direction: column;
+//             vertical-align: middle;
+//             justify-content: center;
+//             align-items: center;
+//             text-align: center;
+//             h2 {
+//                 font-size: 70px;
+//                 font-weight: 800;
+//                 line-height: 60px;
+//             }
+//             h3 {
+//                 font-weight: 400;
+//                 font-size: 32px;
+//                 line-height: 30px;
+//             }
+//         }
+//     }
+//     .practice-areas-list {
+//         $paMinHeight: 500px;
+//         display: flex;
+//         width: 100%;
+//         flex-direction: column;
+//         padding-top: 60px;
+//         background: linear-gradient(to bottom, rgba(#4d030b,1), rgba(#4d030b,0),);        
+//         @media screen and (min-width: 1200px) {
+//             flex-direction: row;            
+//             max-width: none;                      
+//             min-height: $paMinHeight;
+//         }        
+//         @media screen and (max-width: 1199px) {
+//             margin-bottom: -60%;
+//         }
+//         .pa-item {
+//             background-position: top center;
+//             background-size: cover !important;
+//             background-repeat: no-repeat;          
+//             @media screen and (max-width: 1199px) {
+//                 width: 100%;
+//                 min-height: 100px;
+//                 height: 400px;                
+//                 &.car {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.webp');
+//                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);  
+//                     z-index: 1;
+//                     position: relative;                                      
+//                 }
+//                 &.motorcycle {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.webp');                
+//                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);                   
+//                     z-index: 2;
+//                     position: relative;
+//                     transform: translateY(-20%);
+//                 }
+//                 &.truck {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.webp');                                
+//                     clip-path: polygon(0% 0, 100% 20%, 100% 100%, 0% 100%);
+//                     z-index: 3;
+//                     position: relative;
+//                     transform: translateY(-40%);
+//                 }
+//                 &.slip {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.webp');                
+//                     clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
+//                     z-index: 4;
+//                     position: relative;
+//                     transform: translateY(-60%);
+//                 }  
+//             }
+//             @media screen and (min-width: 1200px) {                         
+//                 min-height: $paMinHeight;
+//                 width: 25%;
+//                 position: absolute;
+//             }
+//             .caption {
+//                 position: absolute;
+//                 top: 60px;
+//                 left: 20px;
+//                 right: 20px;
+//                 min-height: 50px;
+//                 z-index: 3;
+//                 display: flex;
+//                 flex-direction: row;
+//                 text-decoration: none;
+//                 vertical-align: middle;   
+//                 align-items: center;
+//                 text-decoration: none;
+//                 column-gap: 10px;       
+//                 cursor: pointer;      
+//                 .line-red {
+//                     max-height: 2px;
+//                     cursor: pointer;
+//                 }
+//                 .line-red2 {
+//                     width: 60%;
+//                     max-width: 100%;
+//                     display: none;
+//                 }
+//                 p {
+//                     font-weight: 300;
+//                     line-height: 18px;
+//                     margin-top: 0;
+//                     margin-bottom: 0;
+//                     cursor: pointer;
+//                 }
+//             }
+//             .caption2 {
+//                 display: none;
+//                 flex-direction: column;
+//                 left: 10px;
+//                 right: 10px;
+//                 bottom: 10px;
+//                 top: 10px;
+//                 max-width: 100%;                
+//                 height: inherit;
+//                 width: inherit;
+//                 position: absolute;
+//                 color: white;                
+//                 vertical-align: bottom;
+//                 align-items: flex-start;
+//                 justify-content: end;
+//                 z-index: 3;
+//                 padding: 20px;
+//                 span {
+//                     display: flex;
+//                     flex-direction: row;
+//                     vertical-align: middle;
+//                     align-items: center;
+//                     column-gap: 20px;
+//                     img {
+//                         transform: rotate(270deg);
+//                     }
+//                 }
+//                 p {
+//                     font-size: 18px;
+//                     line-height: 19px;
+//                 }
+//                 h2 {
+//                     font-size: 40px;
+//                     line-height: 44px;
+//                     margin-top: 4px;
+//                     margin-bottom: 4px;
+//                 }         
+//             }
+//             @media screen and (min-width: 1200px) {
+//                 &.car {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.jpg');                
+//                     left: 0;                    
+//                     z-index: 1;
+//                     width: 32%;                                                
+//                     &.hovered  {
+//                         background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/car-accident.jpg');                
+//                     }
+//                 }
+//                 &.motorcycle {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.jpg');                
+//                     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+//                     left: 20%;                    
+//                     z-index: 2;
+//                     width: 32%;                       
+//                     .caption {
+//                         left: 20%;
+//                     }
+//                     .caption2 {
+//                         left: 15%;
+//                     }
+//                     &.hovered  {
+//                         background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/motorcycle-accident.jpg');                
+//                     }
+//                 }
+//                 &.truck {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.jpg');                                
+//                     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+//                     left: 45%;                    
+//                     z-index: 3;
+//                     width: 32%;                     
+//                     .caption {
+//                         left: 20%;
+//                     }
+//                     .caption2 {
+//                         left: 15%;
+//                     }
+//                     &.hovered  {
+//                         left: 43%;
+//                         background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/truck-accident.jpg');                
+//                     }
+//                 }
+//                 &.slip {
+//                     background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.5)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.jpg');                
+//                     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+//                     left: 70%;
+//                     z-index: 4;                    
+//                     width: 32%;                         
+//                     .caption {
+//                         left: 20%;
+//                     }
+//                     .caption2 {
+//                         left: 15%;
+//                     }
+//                     &.hovered  {
+//                         left: 68%;
+//                         background: linear-gradient(to bottom, rgba(#000, 0.6), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/practiceareas/slip-accident.jpg');                
+//                     }
+//                 }   
+                
+//             }
+//             @media screen and (min-width: 1200px) {
+//                 transition: 0.3s;
+//                 &.hovered { 
+//                     width: 42%;
+//                     z-index: 5;                    
+//                     clip-path: polygon(20% 0, 100% 0, 80% 100%, 0% 100%);  
+//                     .caption {
+//                         .line-red2 {
+//                             display: block;
+//                         }
+//                     }             
+//                     .caption2 {
+//                         display: flex; 
+//                     }                    
+//                 }   
+//                 &.hovered.car {                               
+//                     width: 40%;
+//                     z-index: 5;  
+//                     left: 0;                  
+//                     clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%);               
+//                     .caption2 {
+//                         display: flex; 
+//                     }
+//                 }
+//                 &.no-hovered {
+//                     width: calc(60% / 3) !important;
+//                 }
+//             }
+            
+//         }
+        
+//     }
+// }
 
 .faq-container {
     background: linear-gradient(to bottom, rgba(#fff, 1), rgba(#fff, 0.7)), url('/wp-content/themes/cja-ctl/assets/img/home-mobile-bg-form.png');
@@ -1225,6 +1687,7 @@
     @media screen and (min-width: 1200px) {
         padding-top: 144px;
         padding-bottom: 120px;  
+        margin-top: 520px;
     }  
     max-width: 100%;
     min-height: 100px;
@@ -1233,6 +1696,9 @@
     background-position: top center;
     background-size: cover;
     max-width: 100%;
+    @media screen and (max-width: 1199px) {
+        margin-top: 100px;
+    }
     .caption {
         max-width: 100%;
         @media screen and (min-width: 1200px) {                        

@@ -469,12 +469,12 @@ body {
         display: block;
     }
     @media screen and (min-width: 1200px) {
-        display: none;
+        display: none !important;
     }
 }
 .show-desktop {
     @media screen and (max-width: 1199px) {
-        display: none;
+        display: none !important;
     }
     @media screen and (min-width: 1200px) {
         display: block;
