@@ -303,12 +303,12 @@ body {
             padding: 20px;
             margin-bottom: 10px;
             margin-top: 10px;
-            min-height: 255px;
-            flex-grow: 1;
+            min-height: 255px;            
             border-radius: 5px;
             @media screen and (max-width: 1199px) {
                 width: calc(100% - 40px);
                 max-width: 100%;                
+                flex-grow: 1;
             }
             h2 {
                 @media screen and (min-width: 1200px) {
@@ -330,18 +330,13 @@ body {
                     text-decoration: underline;
                 }
             }
-            @media screen and (min-width: 1200px) {
-                $calculatedWidth: calc((100% - 200px) / 3);
+            $calculatedWidth: calc(33.33% - 70px);
+            @media screen and (min-width: 1200px) {                
                 margin: 10px;
                 width: $calculatedWidth;
                 flex-basis: $calculatedWidth;
-                width: fit-content;
-                min-height: 360px;
-                &.million {
-                    $calculatedWidthMillion: calc(($calculatedWidth * 2) + 65px);
-                    width: $calculatedWidthMillion;
-                    flex-basis: $calculatedWidthMillion;
-                }
+                // width: fit-content;
+                min-height: 360px;               
             }
             h2 {
                 font-weight: 800;
@@ -353,6 +348,11 @@ body {
                 }
             }
             &.million {
+                @media screen and (min-width: 1200px) {
+                    $calculatedWidthMillion: calc(50% + 190px);
+                    width: $calculatedWidthMillion;
+                    flex-basis: $calculatedWidthMillion;
+                }
                 h2 {
                     font-weight: 800;
                     @media screen and (min-width: 1200px) {
@@ -469,12 +469,12 @@ body {
         display: block;
     }
     @media screen and (min-width: 1200px) {
-        display: none;
+        display: none !important;
     }
 }
 .show-desktop {
     @media screen and (max-width: 1199px) {
-        display: none;
+        display: none !important;
     }
     @media screen and (min-width: 1200px) {
         display: block;
@@ -699,14 +699,21 @@ a.f-phone {
             z-index: 3;
             
         }
-        span {        
-            align-self: center;
-            margin-top: 20px;
-            margin-bottom: 20px;            
+        .form-caption {
             position: relative;
-            z-index: 3;            
-            
-        }
+            z-index: 3;        
+            max-width: 100%;    
+            @media screen and (min-width: 1200px) {
+                padding-left: 140px;
+                padding-right: 140px;
+            }
+            span {        
+                align-self: center;
+                margin-top: 20px;
+                margin-bottom: 20px; 
+                max-width: 100%;                       
+            }
+        }        
         #form-container-inside-2,
         #form-container-inside {
             z-index: 3;
@@ -817,11 +824,12 @@ a.f-phone {
                 }
             }
         }
-        span {                    
+        span.f-white:not(h2) {                    
             @media screen and (min-width: 1200px) {
                 font-size: 24px;
                 margin-top: 40px;
                 margin-bottom: 40px;
+                max-width: 600px;
             }
             
         }
@@ -899,4 +907,8 @@ a.f-phone {
     width: 20px;
     height: 20px;
     object-fit: contain;
+}
+
+.fw-800 {
+    font-weight: 800 !important;
 }

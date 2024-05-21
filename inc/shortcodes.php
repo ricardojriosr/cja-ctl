@@ -4,14 +4,19 @@ function homePageBanner($attributes) {
     $output = '<!-- First Block -->
     <div class="hero-banner hero-home">
         <div class="caption-banner-att">
-            <span><h3 class="fm-28">Peter Catalano</h3><span class="LMobile">Attorney &amp; Founder</span></span>
-            <div class="slogan-mobile">Experienced.<br>Compassionate.<br>Tough.
+            <span class="m-title-home-banner"><h3 class="fm-28">Peter Catalano</h3><span class="LMobile">Attorney &amp; Founder</span></span>
+            <div class="slogan-mobile">
+            <h1 class="uppercase f-white fm-35">
+            <span class="move-left fm-35">we’ve won</span>
+            <span class="f-red fm-70">millions</span>
+            <span class="move-right fm-35">for our clients</span>
+            </h1>
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
                 <a href="/contact" class="contactus btn red-btn">Contact Us</a><img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
             </div>
             <div class="slogan-desktop">
                 <h1>We`ve won
-                <span class="red show-desktop-important">Millions</span>
+                <span class="red show-desktop-important fw-800">Millions</span>
                 <span class="move show-desktop-important">for our clients</span></h1>
                 <div class="icons">
                     <img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
@@ -34,28 +39,28 @@ function caseResultsHome($attributes) {
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
                 <h2>$2.3 <span>Million</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6 class="f-32">Car Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="f-32 Light">Car Accident Settlement</h6>
                 </div>
                 <div class="diagonal-box"></div>
             </div>            
         </div>
         <div class="right-part">
             <div class="case-1">
-                <h2 class="f-96">$1.9 <span>Million</span></h2>
+                <h2 class="f-case-results">$1.9 <span>Million</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Worksite Accident &amp; Injuries</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Worksite Accident &amp; Injuries</h6>
                 </div>
             </div>
             <div class="case-2">
-                <h2 class="f-96">$950 <span>Thousand</span></h2>
+                <h2 class="f-case-results">$950 <span>Thousand</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Car Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Car Accident Settlement</h6>
                 </div>
             </div>
             <div class="case-3">
-                <h2 class="f-96">$325 <span>Thousand</span></h2>
+                <h2 class="f-case-results">$325 <span>Thousand</span></h2>
                 <div class="flex flex-row flex-middle">
-                    <div class="line-red"></div><h6>Motorcycle Accident Settlement</h6>
+                    <div class="line-red"></div><h6 class="Light h6-20">Motorcycle Accident Settlement</h6>
                 </div>
             </div>
             <div class="link">
@@ -196,7 +201,7 @@ function gavelBannerHome() {
     $output = '<div class="flex-responsive flex-middle success">
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/gavel-solid.png" alt="50 Years Experience">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/gavel-solid.svg" alt="50 Years Experience">
         </div>
         <div class="caption">
             <h2>50+ Years</h2>
@@ -205,7 +210,7 @@ function gavelBannerHome() {
     </div>
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/scales-solid.png" alt="12000+ Cases Handled">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/scales-solid.svg" alt="12000+ Cases Handled">
         </div>
         <div class="caption">
             <h2>12,000+</h2>
@@ -214,7 +219,7 @@ function gavelBannerHome() {
     </div>
     <div class="item">
         <div class="icon">
-            <img src="/wp-content/themes/cja-ctl/assets/img/awards-solid.png" alt="95% Success">
+            <img src="/wp-content/themes/cja-ctl/assets/img/svg/awards-solid.svg" alt="95% Success">
         </div>
         <div class="caption">
             <h2>95% Success</h2>
@@ -362,8 +367,10 @@ function getAllAttorneys($attributes) {
                             <img src="'.get_field('mobile_image').'" class="att-img" alt="'.get_the_title().'" style="width:auto;">
                         </picture>
                         <div class="caption f-white">
-                            <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>
-                            <h2  class="attorney-title">'.get_the_title().'</h2>
+                            <div class="reverse-desktop">
+                                <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>
+                                <h2  class="attorney-title">'.get_the_title().'</h2>
+                            </div>
                             <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                         </div>
                     </div>';
@@ -376,8 +383,10 @@ function getAllAttorneys($attributes) {
                                     <source media="(min-width:1200px)" srcset="'.get_field('desktop_image').'">
                                     <img src="'.get_field('mobile_image').'" class="att-img" alt="'.get_the_title().'" style="width:auto;">
                                     <div class="caption f-white">
-                                        <span class="uppercase Bold">'.implode(" & ",$titlesArray).'</span>
-                                        <h2 class="attorney-title">'.get_the_title().'</h2>
+                                        <div class="reverse-desktop">
+                                            <span class="uppercase Bold">'.implode(" & ",$titlesArray).'</span>
+                                            <h2 class="attorney-title">'.get_the_title().'</h2>
+                                        </div>
                                         <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                                     </div>
                                 </div>';
@@ -408,7 +417,7 @@ function getTheFormForHome() {
     $output = '<div id="form-container-bg" class="is-desktop">
     <div id="form-container">
         <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
-        <span class="f-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</span>
+        <div class="form-caption"><p class="text-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</p></div>
         <div id="form-container-inside"></div>
     </div>
 </div>';
@@ -418,8 +427,9 @@ add_shortcode('contact-ctl','getTheFormForHome');
 
 function getPracticeAreasHome() {
     $output = '';
-
-        $output = '<div class="practice-areas">
+        $useOld = false;
+        
+        $output1 = '<div class="practice-areas">
         <div class="bg-pa">
             <div class="caption">
                 <h2 class="f-red uppercase f-150 f-red-gradient-m">Practice Areas</h2>
@@ -429,7 +439,7 @@ function getPracticeAreasHome() {
             </div>
         </div>
         <div class="practice-areas-list">
-            <a class="pa-item car no-hover" href="/practice-areas/car-accidents/">
+            <a class="pa-item car " href="/practice-areas/car-accidents/" id="pa-1">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Car<br>Accident</p>
@@ -441,7 +451,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item motorcycle is-hover" href="/practice-areas/motorcycle-accidents/">
+            <a class="pa-item motorcycle " href="/practice-areas/motorcycle-accidents/"  id="pa-2">
                 <div class="caption">   
                     <div class="line-red"></div>
                     <p class="f-white">Motorcycle<br>Accident</p>
@@ -453,7 +463,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item truck no-hover" href="/practice-areas/truck-accidents/">
+            <a class="pa-item truck " href="/practice-areas/truck-accidents/"  id="pa-3">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Truck<br>Accident</p>
@@ -465,7 +475,7 @@ function getPracticeAreasHome() {
                     <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
                 </div>
             </a>
-            <a class="pa-item slip no-hover" href="/practice-areas/slip-and-fall-injuries/">
+            <a class="pa-item slip " href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
                 <div class="caption">
                     <div class="line-red"></div>
                     <p class="f-white">Slip<br>and Fall</p>
@@ -479,7 +489,124 @@ function getPracticeAreasHome() {
             </a>
         </div>
     </div>';
+
     
+
+    $output2 = '
+    <div class="practice-areas2">
+        <div class="pa2-bg">
+            <div class="caption">
+                <h2 class="f-red uppercase f-150 f-red-gradient-m">Practice Areas</h2>
+                <p class="f-white uppercase f-64 fw-700">Here to Help</p>
+                <p class="f-white p-f-36">Catalano Law has a strong record of helping victims in all kinds of personal injury and accident cases. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="/practice-areas" class="btn btn-red f-white mt-40">All Practice Areas</a>
+            </div>
+            <div class="practice-areas2-list show-mobile">
+                <a class="pa-item car " href="/practice-areas/car-accidents/" id="pa-1">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Car<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Car Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item motorcycle " href="/practice-areas/motorcycle-accidents/"  id="pa-2">
+                    <div class="caption">   
+                        <div class="line-red"></div>
+                        <p class="f-white">Motorcycle<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Motorcycle Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item truck " href="/practice-areas/truck-accidents/"  id="pa-3">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Truck<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Truck Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item slip " href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Slip<br>and Fall</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Slip and Fall</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst.</p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+            </div>
+            <div class="practice-areas3-list show-desktop">
+                <a class="pa-item car to-hover hovered" href="/practice-areas/car-accidents/" id="pa-1">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Car<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Car Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item motorcycle to-hover no-hovered" href="/practice-areas/motorcycle-accidents/"  id="pa-2">
+                    <div class="caption">   
+                        <div class="line-red"></div>
+                        <p class="f-white">Motorcycle<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Motorcycle Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item truck to-hover no-hovered" href="/practice-areas/truck-accidents/"  id="pa-3">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Truck<br>Accident</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Truck Accident</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst. </p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+                <a class="pa-item slip to-hover no-hovered" href="/practice-areas/slip-and-fall-injuries/"  id="pa-4">
+                    <div class="caption">
+                        <div class="line-red"></div>
+                        <p class="f-white">Slip<br>and Fall</p>
+                        <div class="line-red2"></div>
+                    </div>
+                    <div class="caption2">
+                        <h2>Slip and Fall</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit rutrum libero. In hac habitasse platea dictumst.</p>
+                        <span>Learn More <img src="/wp-content/themes/cja-ctl/assets/img/faq-icon.png" alt="Learn More" class="pa-more"></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    ';
+    
+    if ($useOld) { $output = $output1; }
+    if (!$useOld) { $output = $output2; }
     return $output;
 }
 add_shortcode('practice-areas-ctl','getPracticeAreasHome');

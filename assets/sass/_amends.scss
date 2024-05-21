@@ -9,6 +9,15 @@
 }
 .post-type-archive-practice-areas,
 .page-id-1434 {
+    @media screen and (max-width: 1199px) {
+        .container-site {
+            .hero-banner {
+                .caption-hero {
+                    transform: translateY(0px) !important;
+                }
+            }
+        }
+    }
     @media screen and (min-width: 1200px) {
         .container-site {
             .hero-banner {
@@ -318,6 +327,20 @@
         font-weight: 200;
     }
     .home {
+        h1 {
+            line-height: 50px;
+            margin-bottom: 40px;
+            .move-left {
+                text-align: left;
+                display: flex;
+            }
+            .move-right {
+                text-align: right;
+                display: flex;
+                justify-content: flex-end;
+                line-height: 30px;
+            }
+        }        
         .badges-container {
             .badges {
                 img {
@@ -545,10 +568,130 @@
             }
         }
     }
+    .page-id-147 {
+        h2, p.has-text-align-center {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        h2 {
+            line-height: 35px;
+        }
+        
+    }
+    .page-id-1470 {
+        .hero-banner {
+            background-position: center 20px !important;
+            min-height: 350px !important;
+            .caption-hero-bg {
+                h1 {
+                    font-size: 42px !important;
+                    font-weight: 700 !important;
+                    line-height: 40px !important;
+                    span.small-font {
+                        font-size: 30px !important;
+                        font-weight: 700 !important;
+                    }
+                }
+                p {
+                    font-size: 24px;
+                    font-weight: 300;                    
+                }
+            }
+        }        
+        .caption2 {
+            h2, p.has-text-align-center {
+                margin-left: 10px;
+                margin-right: 10px;
+            }            
+        }
+        .caption2 {
+            transform: translateY(-50px);
+            margin-bottom: -50px;
+        }
+    }
+    .page-id-68 {
+        .hero-banner.hero-banner-bg {
+            .caption-hero-bg {
+                h1 {
+                    font-size: 80px;
+                    span.medium-font {
+                        line-height: 45px;    
+                        font-size: 32px;
+                    }
+                }
+                p {
+                    font-size: 24px;
+                    font-weight: 300;                    
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .home {
+        .faq-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+}
+.container-attorneys {
+    .team-staff {
+        @media screen and (min-width: 1200px) {
+            &::after {
+                content: none !important;
+            }
+            .caption.f-white {      
+                .reverse-desktop {
+                    span, h2 {
+                        color: black;
+                    }
+                }
+                a.btn {
+                    color: black !important;
+                }
+            }       
+        }
+        @media screen and (max-width: 1199px) { 
+            a.btn {
+                margin-left: 0;
+            }
+            &:nth-child(even) {
+                a.btn {
+                    margin-right: 0;
+                }
+            }
+        }
+
+    }
 }
 
 @media screen and (min-width: 1200px) {
+    .reverse-desktop {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 10px;
+    }
     .container-attorneys {
+        .team-staff {
+            &::after {
+                content: none;
+            }
+            img.att-img {
+                object-fit: cover !important;
+                object-position: center -40px !important;
+                aspect-ratio: 1;
+            }
+            &:nth-child(even) {
+                .caption.f-white {
+                    .reverse-desktop {
+                        text-align: right !important;
+                        align-self: flex-end !important;
+                        align-items: flex-end !important;
+                    }
+                }
+            }
+        }
         .secondary-attorney {
             .caption.f-white {      
                 left: 0 !important;
@@ -563,18 +706,60 @@
                 .caption.f-white {
                     left: auto !important;
                     right: 0 !important;
-                    span, h2 {
-                        text-align: right;
-                        align-self: flex-end;
-                        align-items: flex-end;
+                    .reverse-desktop {
+                        text-align: right !important;
+                        align-self: flex-end !important;
+                        align-items: flex-end !important;
+                        span, h2 {
+                            text-align: right !important;
+                            align-self: flex-end !important;
+                            align-items: flex-end !important;
+                            margin-right: 0 !important;
+                            margin-left: auto !important;
+                            display: flex;
+                        }
                     }
                     a {
                         margin-top: 10px;
                         margin-right: 0;
                         margin-left: auto;
                     }  
+
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        .container-site {
+            .hero-banner.hero-home {
+                padding-top: 460px;
+                .caption-banner-att {                                     
+                    h1 {
+                        transform: translateY(-20px);
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .post-template-default.single.single-post {
+        h1 {
+            font-size: 100px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single {
+        #form-container-bg #form-container .form-caption {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
