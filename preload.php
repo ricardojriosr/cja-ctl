@@ -16,6 +16,9 @@ $footerOption = 1;
 $themePhone = "3159042449";
 $numberFormat = "0";
 
+/* EMAIL */
+$themeEmail = 'info@catalanolegal.com';
+
 /*
 0 = (123) 456-7890
 1 = 123.456.7890

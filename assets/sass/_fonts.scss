@@ -61,6 +61,14 @@ h1 {
     font-size: 60px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 60px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -75,6 +83,14 @@ h2 {
     font-size: 50px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -89,6 +105,14 @@ h3 {
     font-size: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -103,6 +127,14 @@ h4 {
     font-size: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -117,6 +149,14 @@ h5 {
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -131,6 +171,14 @@ h6 {
     font-size: 18px;
     margin-top: 5px;
     margin-bottom: 5px;
+    strong {
+        font-family: "english-grotesque", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
     span {
         font-family: "english-grotesque", sans-serif;
         font-weight: 700;
@@ -342,6 +390,12 @@ h2.f-case-results {
         }
     }
     @media screen and (min-width: 1600px) {
+        font-size: 3.6vw !important;
+        span {
+            font-size: 3.6vw !important;
+        }
+    }
+    @media screen and (min-width: 2000px) {
         font-size: 70px !important;
         span {
             font-size: 70px !important;
@@ -363,4 +417,8 @@ h2.f-case-results {
     .fm-35 {
         font-size: 35px;
     }
+}
+
+span.red-text {
+    color: #ED0D27;
 }

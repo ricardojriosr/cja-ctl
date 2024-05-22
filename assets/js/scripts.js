@@ -31,31 +31,3 @@ function showAllBlogs() {
     });
     loadMore.style.display = 'none';
 }
-
-// var allPAItems = document.querySelectorAll(".to-hover");
-
-// if (allPAItems) {
-//     console.log('FLAG');
-//     [].forEach.call(allPAItems, function(pAitem) {
-//         pAitem.addEventListener("mouseover", function(e) {   
-//             var prevID = '#' + this.id;            
-//             var thisID = document.querySelector(prevID);  
-//             console.log(prevID);
-//             console.log(thisID);
-//             thisID.classList.toggle("hovered");
-//             // [].forEach.call(allPAItems, function(pAitem2) {
-//             //     if (pAitem2.id != e.target.id) {
-//             //         document.querySelector("#" + pAitem2.id).classList.add("no-hovered");
-//             //     }
-//             // }); 
-//             thisID.addEventListener("mouseout", function(e) {  
-//                 thisID.classList.remove("hovered");
-//                 [].forEach.call(allPAItems, function(pAitem3) {
-//                     document.querySelector("#" + pAitem3.id).classList.remove("no-hovered");
-//                     document.querySelector("#" + pAitem3.id).classList.remove("hovered");
-//                 });
-//             });        
-            
-//         });    
-//     });
-// }

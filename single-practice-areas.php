@@ -9,6 +9,11 @@
     $imageClass = '';
     if (get_field('banner_mobile_image') != '') { $mobileImg = get_field('banner_mobile_image');  $imageClass = ' has-image';}
     if (get_field('banner_desktop_image') != '') { $desktopImg = get_field('banner_desktop_image'); $imageClass = ' has-image'; }  
+    if (($imageClass == '') && (has_post_thumbnail())) {
+        $imageClass = ' has-image';
+        $mobileImg = get_the_post_thumbnail_url();
+        $desktopImg = get_the_post_thumbnail_url();
+    }
 ?>
 <div class="post-content<?php echo $imageClass; ?>">
             <div class="image-part show-mobile">
@@ -43,7 +48,8 @@
                 ?>
             </div>
     <div class="the-content">
-        <div class="form-part">
+        <?php if (!catalanowins_detect_is_mobile()) {  ?>
+        <div class="form-part show-desktop">
             <div id="form-container-bg" class="no-home">
                 <div id="form-container">
                 <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
@@ -51,6 +57,7 @@
                 <div id="form-container-inside"></div>
             </div>
         </div>
+        <?php } ?>
         <?php echo do_shortcode('[gravityform id="1"]'); ?>
     </div>
         <div class="caption">
@@ -88,7 +95,7 @@
             </div>            
     </div>
             <div class="caption2">
-            <?php the_content( ); ?>  
+                <?php the_content( ); ?>  
             </div>       
             <?php if ( ! empty( $categories ) ) { ?>
             <div class="results-part show-mobile">

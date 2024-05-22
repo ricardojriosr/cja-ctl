@@ -12,7 +12,7 @@ function homePageBanner($attributes) {
             <span class="move-right fm-35">for our clients</span>
             </h1>
                 <img src="/wp-content/themes/cja-ctl/assets/img/catalano-wins.png" alt="Catalano Wins" class="ctlwinsimg"/>
-                <a href="/contact" class="contactus btn red-btn">Contact Us</a><img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
+                <a href="/contact" class="contactus btn red-btn text-white">Contact Us</a><img src="/wp-content/themes/cja-ctl/assets/img/no-fee.png" alt="No Fee" class="ctlwinsimg"/>
             </div>
             <div class="slogan-desktop">
                 <h1>We`ve won
@@ -64,7 +64,7 @@ function caseResultsHome($attributes) {
                 </div>
             </div>
             <div class="link">
-                <a href="/results/" class="btn btn-red">See Our Victories</a>
+                <a href="/results/" class="btn btn-red text-white">See Our Victories</a>
             </div>
         </div>
     </div>';
@@ -339,9 +339,13 @@ function getAllAttorneys($attributes) {
     $mainAttorney = '';
     $secondaryAttorney = '';
     $otherStaff = '';
+    $counter = 0;
+    $counter2 = 0;
     while ( $loop->have_posts() ) : $loop->the_post();         
         $firstName = explode(" ", get_the_title())[0];
-        $titlesArray = get_field('team_title');    
+        $titlesArray = get_field('team_title');  
+        $newClass = "move-left";
+        if (!even($counter)) { $newClass = "move-right"; }
         if (in_array('Attorney', $titlesArray)) {
             if (get_field('in_front_page')) {
                 if (get_field('order') == 1) {            
@@ -353,13 +357,14 @@ function getAllAttorneys($attributes) {
                         </picture>
                         <div class="caption f-white">
                             <div class="d-flex flex-column">
-                                <h2  class="attorney-title">'.get_the_title().'</h2>
+                                <h2  class="attorney-title move-left">'.get_the_title().'</h2>
                                 <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>                                
                             </div>
                             <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                         </div>
                     </div>';
                 } else {
+                    
                     $secondaryAttorney .= '<div class="secondary-attorney">
                         <picture>
                             <source media="(max-width:1199px)" srcset="'.get_field('mobile_image').'">
@@ -369,29 +374,38 @@ function getAllAttorneys($attributes) {
                         <div class="caption f-white">
                             <div class="reverse-desktop">
                                 <span class="uppercase occupation">'.implode(" & ",$titlesArray).'</span>
-                                <h2  class="attorney-title">'.get_the_title().'</h2>
+                                <h2  class="attorney-title '.$newClass.'">'.get_the_title().'</h2>
                             </div>
                             <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
                         </div>
                     </div>';
                 }
-            }               
+            }   
+            $counter++;            
         } else {
+            $newClass = "move-left";
+            $newClassBtn = "move-left-btn";
+            if (even($counter2)) { 
+                $newClass = "move-right"; 
+                $newClassBtn = "move-right-btn";
+            }
             if (isset($atts['add_staff']) && ($atts['add_staff'] == '1')) {
                 $otherStaff .= '<div class="team-staff">
                                     <source media="(max-width:1199px)" srcset="'.get_field('mobile_image').'">
                                     <source media="(min-width:1200px)" srcset="'.get_field('desktop_image').'">
                                     <img src="'.get_field('mobile_image').'" class="att-img" alt="'.get_the_title().'" style="width:auto;">
                                     <div class="caption f-white">
-                                        <div class="reverse-desktop">
+                                        <div class="reverse-desktop '.$newClass.'">
                                             <span class="uppercase Bold">'.implode(" & ",$titlesArray).'</span>
-                                            <h2 class="attorney-title">'.get_the_title().'</h2>
+                                            <h2 class="attorney-title '.$newClass.'">'.get_the_title().'</h2>
                                         </div>
-                                        <a href="'.get_the_permalink().'" class="btn btn-red f-white">Meet '.$firstName.'</a>
+                                        <a href="'.get_the_permalink().'" class="btn btn-red f-white '.$newClassBtn.'">Meet '.$firstName.'</a>
                                     </div>
                                 </div>';
             }
+            $counter2++;
         }
+        
     endwhile;
     wp_reset_postdata(); 
 

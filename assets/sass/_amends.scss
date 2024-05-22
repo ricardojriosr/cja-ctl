@@ -127,7 +127,7 @@
     }
     .f-125 {
         font-size: 125px !important;
-        line-height: 70px !important;
+        line-height: 90px !important;
     }
     .f-55 {
         font-size: 55px !important;
@@ -489,21 +489,39 @@
     .caption2 {
         h1 {
             font-size: 42px;
+            strong {
+                font-size: 42px;
+            }
         }
         h2 {
             font-size: 36px;
+            strong {
+                font-size: 36px;
+            }
         }
         h3 {
             font-size: 32px;
+            strong {
+                font-size: 32px;
+            }
         }
         h4 {
             font-size: 30px;
+            strong {
+                font-size: 30px;
+            }
         }
         h5 {
             font-size: 28px;
+            strong {
+                font-size: 28px;
+            }
         }
         h6 {
             font-size: 26px;
+            strong {
+                font-size: 26px;
+            }
         }
         p {
             font-weight: 300;
@@ -718,6 +736,10 @@
                             margin-left: auto !important;
                             display: flex;
                         }
+                        h2 {
+                            margin-right: 0;
+                            padding-right: 0;
+                        }
                     }
                     a {
                         margin-top: 10px;
@@ -749,9 +771,16 @@
 
 @media screen and (min-width: 1400px) {
     .post-template-default.single.single-post {
-        h1 {
-            font-size: 100px !important;
-        }
+        .caption-hero {
+            max-width: 923px;
+            margin-left: auto;
+            margin-right: auto;
+            h1 {
+                font-size: 60px !important;
+                font-weight: 800 !important;
+                line-height: 70px !important;
+            }
+        }        
     }
 }
 
@@ -761,5 +790,131 @@
             padding-left: 0;
             padding-right: 0;
         }
+        .caption2 {
+            p, ul, li {
+                font-size: 24px;
+            }
+        }
+        
+    }
+    .single ,
+    .practice-areas-template-default {
+        .the-content {
+            max-width: 1160px;
+        }
+    }
+    .desktop-footer-padding {
+        margin-bottom: 170px;
     }
 }
+
+.team-staff {
+    border: none !important;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    .single,
+    .post-template-default.single.single-post,
+    .single.single-post {
+        
+        .image-part.show-desktop {
+            width: 100%;
+            text-align: center;
+            img {
+                width: 80%;
+                min-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+    }
+}
+
+.results-part.show-desktop {
+    .related-posts {
+        padding-left: 10%;
+        padding-right: 10%;
+    }    
+}
+
+.page-id-140 {
+    .faq-container {
+        margin-top: 20px;
+        @media screen and (min-width: 1200px) {
+            padding-top: 20px;
+        }
+    }    
+}
+
+@media screen and (max-width: 1199px) {
+    .page-id-144 {
+        #form-container-bg #form-container h2 {
+            font-size: 45px;
+            span {
+                font-size: 45px;
+            }
+        }
+    }
+    .move-right {
+        text-align: right !important;
+        align-self: flex-end !important;
+        padding-right: 0 !important;
+        margin-right: 0 !important;
+    }   
+    .move-left {
+        text-align: left !important;
+        align-self: flex-start !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        span {
+            text-align: left !important;
+            align-self: flex-start !important;
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
+    }   
+    .move-left-btn {
+        align-self: flex-start !important;
+        margin-left: 0 !important;
+    }
+    .move-right-btn {
+        align-self: flex-end !important;
+        margin-right: 0 !important;
+    }
+    .practice-areas-template-default {
+        #form-container-bg {
+            padding: 0;
+        }
+    }    
+}
+
+.faq-container {
+    .caption {
+        .faq-list {
+            ul {
+                li {
+                    min-height: 90px;
+                    .title {
+                        min-height: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page-id-1470 {
+    .container-site {
+        .hero-banner.hero-banner-bg.t2 {
+            @media screen and (min-width: 1200px) {
+                background-position: center -120px !important;
+            }
+            @media screen and (min-width: 1800px) {
+                background-position: center -150px !important;
+            }
+        }
+    }
+}
+

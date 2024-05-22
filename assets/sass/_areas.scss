@@ -1,0 +1,65 @@
+.areas-we-serve-template-default {
+    .caption-hero {
+        p {
+            display: none;
+            height: 0;
+        }
+    }
+    .office-info {
+        margin-top: 10px;
+        display: flex;        
+        flex-direction: row;
+        column-gap: 20px;
+        @media screen and (min-width: 1200px) {
+            column-gap: 40px;
+        }
+        a {
+            color: #FFF;
+            text-align: center;            
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: normal;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            vertical-align: middle;
+            align-items: center;
+            justify-content: center;
+            span {
+                text-decoration: underline;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: 24px;
+            }
+            svg {
+                height: 25px;
+                width: 25px;
+                margin-right: 5px;
+                @media screen and (min-width: 1200px) {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .page-content {
+        .post-content {
+            .the-content {
+                .caption2 {
+                    h1, h2, h3, h4, h5, h6 {
+                        text-transform: capitalize;
+                        color: #ED0D27;
+                        font-weight: 700;
+                        strong {
+                            text-transform: capitalize;
+                            color: #ED0D27;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}

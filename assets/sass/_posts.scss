@@ -67,8 +67,11 @@
                 }                
                 @media screen and (min-width: 1200px) {
                     float: right;   
-                    display: flex; 
-                    padding: 20px;              
+                    display: flex;                                   
+                    padding-left: 40px;
+                    padding-bottom: 40px;
+                    padding-right: 0;
+                    padding-top: 20px;
                     width: 500px;                                          
                 }                
             }
@@ -82,6 +85,7 @@
     }
     .image-part {
         max-width: 100%;
+        text-align: center;
         img {
             border-radius: 20px;
             max-width: 100%;
@@ -91,6 +95,7 @@
                 width: calc(100% - 500px - 20px);
                 height: auto;
                 flex-shrink: 0;
+                transform: translateX(-20px);
             }
         }         
     }
@@ -458,3 +463,15 @@
         background-size: cover;
     }
 }
+
+
+
+.caption2 {
+    a {
+        color: #ED0D27;
+        &:hover {
+            font-weight: 300;
+        }
+    }
+}
+

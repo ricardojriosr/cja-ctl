@@ -9,13 +9,18 @@ if (isset(get_field('show_form')[0])) {
     }
 }
 if ( is_singular(array( 'practice-areas'))) {
-    $showForm = false;
+    $showForm = false;    
 }
+
 if (is_single(  )) {
     $showForm = false;
 }
 if ( is_singular(array( 'team-member'))) {
     $showForm = true;
+}
+
+if ( is_singular(array( 'areas-we-serve'))) {
+    $showForm = true;    
 }
 if ((!is_front_page(  )) && ($showForm)) { 
     if (is_page( array(144) )) {
@@ -34,7 +39,7 @@ if ((!is_front_page(  )) && ($showForm)) {
 <?php
     } else {
 ?>
-<div id="form-container-bg" class="no-home is-desktop">
+<div id="form-container-bg" class="no-home is-desktop desktop-footer-padding">
     <div id="form-container">
         <h2 class="uppercase f-white">Request Free <span class="f-red">Consultation</span></h2>
         <div class="form-caption"><p class="text-white">To get answers to questions about your injury, contact Catalano Law for a FREE case evaluation. We’ll assess your case, explain your legal options, and recommend the next steps at no cost. We’re here when you need us.</p></div>

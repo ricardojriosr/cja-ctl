@@ -9,6 +9,12 @@
     $imageClass = '';
     if (get_field('banner_mobile_image') != '') { $mobileImg = get_field('banner_mobile_image');  $imageClass = ' has-image';}
     if (get_field('banner_desktop_image') != '') { $desktopImg = get_field('banner_desktop_image'); $imageClass = ' has-image'; }  
+    if (($imageClass == '') && (has_post_thumbnail())) {
+        $imageClass = ' has-image';
+        $mobileImg = get_the_post_thumbnail_url('medium');
+        $desktopImg = get_the_post_thumbnail_url('full');
+    }
+    
 ?>
 <div class="post-content<?php echo $imageClass; ?>">
             <div class="image-part show-mobile">
@@ -35,8 +41,12 @@
                     <img src="<?php echo $desktopImg; ?>" alt="<?php echo get_the_title( ); ?>">
                 </picture>
                 <?php
+                
                 } else {
                 ?>
+                    <?php if (has_post_thumbnail()) { ?>
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title( ); ?>">                    
+                    <?php } ?>
                     <!-- No Image Added -->
                 <?php
                 }
@@ -85,6 +95,9 @@
                 <?php
                 } else {
                 ?>
+                    <?php if (has_post_thumbnail()) { ?>
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title( ); ?>">                    
+                    <?php } ?>
                     <!-- No Image Added -->
                 <?php
                 }
@@ -94,15 +107,15 @@
             <?php the_content( ); ?>            
             </div>
         </div>
-        <?php if ( ! empty( $categories ) ) { ?>
+        
+    </div>    
+    
+</div>
+<?php if ( ! empty( $categories ) ) { ?>
         <div class="results-part show-desktop">
             <?php echo do_shortcode( '[rel-posts related_category="'.$categories[0]->term_id.'"]' ); ?>
         </div>
         <?php } ?>
-    </div>    
-    
-    
-</div>
     </div>
 </div>
 <?php get_footer(); ?>
