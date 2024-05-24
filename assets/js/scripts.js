@@ -31,3 +31,25 @@ function showAllBlogs() {
     });
     loadMore.style.display = 'none';
 }
+
+if (document.querySelector('.splide')) {
+    var splide = new Splide( '.splide', {
+        type   : 'loop',
+        perPage: 3,
+        focus  : 'center',
+        breakpoints: {
+            1200: {
+                perPage: 1,           
+            },   
+            1000: {
+                perPage: 1,           
+            },            
+            768: {
+              perPage: 1,
+        
+            },
+        } 
+    });
+      
+    splide.mount();
+}

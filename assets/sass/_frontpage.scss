@@ -485,8 +485,8 @@
     display: flex;
     flex-direction: column;
     color: white;
-    border-radius: 6px;
     @media screen and (min-width: 1200px) {
+        border-radius: 6px;
         margin: 20px;
     }
     .right-part,
@@ -505,14 +505,22 @@
     }
     .left-part {
         text-align: center;
+        @media screen and (min-width: 1200px) {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
         @media screen and (max-width: 1199px) {
+            // border-top-left-radius: 6px;
+            // border-top-right-radius: 6px;
             padding-top: 40px;
         }
         h2 {
             font-size: 128px;
             line-height: 80px;
+            margin-bottom: 10px;
             @media screen and (min-width: 1200px) {
-                font-size: 128px;   
+                font-size: 150px;   
+                margin-bottom: 20px;
             }
         }
         img {
@@ -522,9 +530,21 @@
             margin-top: 5px;
             margin-bottom: 5px;
             font-weight: 700;
+            @media screen and (min-width: 1200px) {
+                font-size: 25px;
+            }
         }
     }
     .right-part {
+        @media screen and (min-width: 1200px) {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+        @media screen and (max-width: 1199px) {
+            // border-bottom-left-radius: 6px;
+            // border-bottom-right-radius: 6px;
+            padding-top: 40px;
+        }
         h2 {
             text-align: center;
             font-weight: 400;
@@ -580,10 +600,13 @@
                 .testimonial {
                     display: flex;
                     flex-direction: column;                    
-                    flex-basis: calc(100% / 3);
-                    width: calc(100% / 3);;
+                    // flex-basis: calc(100% / 3);
+                    // width: calc(100% / 3);;
                     min-height: 50px; 
                     padding: 20px;                                  
+                    max-width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }
@@ -597,6 +620,14 @@
         .right-part {
             flex-basis: 75%;
             width: 75%;
+            @media screen and (min-width: 1440px) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @media screen and (min-width: 1800px) {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
         }
     }
 }

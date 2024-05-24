@@ -125,6 +125,7 @@ if ((!is_front_page(  )) && ($showForm)) {
     </div>
 
     <?php wp_footer(); ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/splide/splide.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js"></script>
 </body>

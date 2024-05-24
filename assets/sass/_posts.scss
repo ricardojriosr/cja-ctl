@@ -467,7 +467,7 @@
 
 
 .caption2 {
-    a {
+    a:not(.btn) {
         color: #ED0D27;
         &:hover {
             font-weight: 300;

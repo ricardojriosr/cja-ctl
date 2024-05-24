@@ -13,7 +13,7 @@ $footerOption = 1;
 
 
 /* PHONE NUMBER */
-$themePhone = "3159042449";
+$themePhone = "3155005000";
 $numberFormat = "0";
 
 /* EMAIL */

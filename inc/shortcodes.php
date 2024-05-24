@@ -256,7 +256,8 @@ function getTheBadges() {
 add_shortcode('badges','getTheBadges');
 
 function getTheReviews() {
-    $output = '<div class="client-block">
+    $whichOption = 2;
+    $output1 = '<div class="client-block">
     <div class="left-part red-gradient">
         <h2>4.9</h2>
         <img src="/wp-content/themes/cja-ctl/assets/img/stars-review.png" alt="Users Review">
@@ -314,6 +315,107 @@ function getTheReviews() {
         </div>
     </div>
 </div>';
+
+    $googleReviews = [
+        [
+            'score' => 5,
+            'reviewer' => 'Hallie Kowalsky',
+            'the_review' => 'Professional, honest. They educate you so you can make an informed decision. They put people first and their well being. Their words and actions match up.',
+        ],
+        [
+            'score' => 5,
+            'reviewer' => 'Gerald Dorrian',
+            'the_review' => 'I was in a serious accident in February of 2023 and needed major surgery and PT. I’m still healing but Peter and Dominic worked hard to get me the settlement that I deserved.They were always available to answer any questions and explain things to me numerous times that I just didn’t understand.',
+        ],
+        [
+            'score' => 5,
+            'reviewer' => 'Linda Grieves',
+            'the_review' => 'These guys are the best. I called them 2 days after my accident, Jamie was here within the week, to talk and get info. Great communication, when ever I called, he called me back as soon as he could. Kept me updated on all the different aspects of my case.',
+        ],
+        [
+            'score' => 5,
+            'reviewer' => 'Hallie Kowalsky',
+            'the_review' => 'Professional, honest. They educate you so you can make an informed decision. They put people first and their well being. Their words and actions match up.',
+        ],
+        [
+            'score' => 5,
+            'reviewer' => 'Gerald Dorrian',
+            'the_review' => 'I was in a serious accident in February of 2023 and needed major surgery and PT. I’m still healing but Peter and Dominic worked hard to get me the settlement that I deserved.They were always available to answer any questions and explain things to me numerous times that I just didn’t understand.',
+        ],
+        [
+            'score' => 5,
+            'reviewer' => 'Linda Grieves',
+            'the_review' => 'These guys are the best. I called them 2 days after my accident, Jamie was here within the week, to talk and get info. Great communication, when ever I called, he called me back as soon as he could. Kept me updated on all the different aspects of my case.',
+        ],
+    ];
+
+    $output2 = 
+    '<div class="client-block">
+        <div class="left-part red-gradient">
+            <h2>4.9</h2>
+            <img src="/wp-content/themes/cja-ctl/assets/img/stars-review.png" alt="Users Review">
+            <p>Average Google<br>User Review</p>            
+        </div>';
+        if (1 == 2) {
+        $output2 .= '<div class="right-part dark-red-gradient show-mobile">
+            <h2 class="uppercase">What Our Clients are Saying</h2>
+            <div class="testimonial-container">';
+            foreach($googleReviews as $index => $value) {
+                $theStars = '';
+                for ($i = 0; $i < $value['score']; $i++) {
+                    $theStars .= '<img src="/wp-content/themes/cja-ctl/assets/img/Star.png" alt="Star Score">';
+                }
+                $output2 .= '<div class="testimonial">
+                <div class="star-container">
+                '.$theStars.'
+                </div>
+                <div class="caption"><p>'.$value['the_review'].'</p>
+                        <span class="google">
+                            <img src="/wp-content/themes/cja-ctl/assets/img/Google__G__logo.png" alt="Google Score">
+                            <p>'.$value['reviewer'].'</p>
+                        </span>
+                    </div>
+                </div>';
+            }
+            $output2 .= '</div></div>';
+        }
+            $output2 .= '
+        <div class="right-part dark-red-gradient">
+            <h2 class="uppercase">What Our Clients are Saying</h2>
+            <div class="testimonial-container">
+                <section class="splide" aria-label="Reviews">
+                    <div class="splide__track">
+                        <ul class="splide__list">';
+                            foreach($googleReviews as $index => $value) {
+                                $theStars = '';
+                                for ($i = 0; $i < $value['score']; $i++) {
+                                    $theStars .= '<img src="/wp-content/themes/cja-ctl/assets/img/Star.png" alt="Star Score">';
+                                }
+                                $output2 .= '<li class="splide__slide">
+                                <div class="testimonial">
+                                    <div class="star-container">
+                                        '.$theStars.'
+                                    </div>
+                                    <div class="caption"><p>'.$value['the_review'].'</p>
+                                        <span class="google">
+                                            <img src="/wp-content/themes/cja-ctl/assets/img/Google__G__logo.png" alt="Google Score">
+                                            <p>'.$value['reviewer'].'</p>
+                                        </span>
+                                    </div>
+                                </div>';
+                            }
+                            $output2 .= '</li>                           
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>';
+
+    $output = $output1;
+    if ($whichOption == 2) {
+        $output = $output2;
+    }
     return $output;
 }
 

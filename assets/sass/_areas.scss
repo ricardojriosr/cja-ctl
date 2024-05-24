@@ -1,4 +1,20 @@
 .areas-we-serve-template-default {
+    .hero-banner.t3 {
+        min-height: 400px;
+        max-height: 406px;
+        img {
+            min-height: 400px;
+            max-height: 406px;
+        }
+        &::after {
+            min-height: 400px;
+            max-height: 406px;
+        }
+        margin-bottom: 40px;
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 90px;
+        }
+    }
     .caption-hero {
         p {
             display: none;

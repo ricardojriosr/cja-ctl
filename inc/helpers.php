@@ -164,6 +164,22 @@ function catalanowins_detect_is_mobile() {
     return $response;
 }
 
+
+function get_two_sentences($content) {
+    
+    $dot = ".";
+    $response = "";
+    $position = stripos ($content, $dot); //find first dot position
+
+    if($position) { //if there's a dot in our soruce text do
+        $offset = $position + 1; //prepare offset
+        $position2 = stripos ($content, $dot, $offset); //find second dot using offset
+        $first_two = substr($content, 0, $position2); //put two first sentences under $first_two
+
+        $response = $first_two . '.'; //add a dot
+    }
+    return $response;
+}
 ?>
 
 

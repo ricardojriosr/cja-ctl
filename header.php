@@ -28,7 +28,8 @@
         }
     </style>
     <link rel="stylesheet" href="https://use.typekit.net/yid4mae.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">       
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">    
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/splide/splide.min.css"> 
     <?php if ((isset($_GET['debug'])) && ($_GET['debug'] == 'css')) { ?>
       <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/debug.css">   
     <?php } ?>

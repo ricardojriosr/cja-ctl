@@ -111,29 +111,34 @@ if (( is_page_template( array( 'page-overlay.php' ) ) ) || (is_single(  ))) {
                         </div>
                         <?php
                     } else {
-                        $theExcerpt = substr(get_the_excerpt(),0,120).'...';; 
-                        $theExcerpt = '';
-                        echo $theExcerpt;
-                        $theDate = get_the_date();
-                        $theAuthor = get_the_author();
-                        echo $theDate;
-                        echo " <span class='text-red red-text'>//</span> ";
-                        $fname = get_the_author_meta('first_name');
-                        $lname = get_the_author_meta('last_name');
-                        $full_name = '';
-
-                        if( empty($fname)){
-                            $full_name = $lname;
-                        } elseif( empty( $lname )){
-                            $full_name = $fname;
+                        if ( is_singular(array( 'practice-areas'))) {
+                            $theExcerpt = get_two_sentences(get_the_excerpt()); 
+                            $theExcerpt = $theExcerpt ;
+                            echo $theExcerpt;
                         } else {
-                            //both first name and last name are present
-                            $full_name = $lname .", ".$fname;
+                            $theDate = get_the_date();
+                            $theAuthor = get_the_author();
+                            echo $theDate;
+                            echo " <span class='text-red red-text'>//</span> ";
+                            $fname = get_the_author_meta('first_name');
+                            $lname = get_the_author_meta('last_name');
+                            $full_name = '';
+
+                            if( empty($fname)){
+                                $full_name = $lname;
+                            } elseif( empty( $lname )){
+                                $full_name = $fname;
+                            } else {
+                                //both first name and last name are present
+                                $full_name = $lname .", ".$fname;
+                            }
+                            if ($full_name == '') {
+                                $full_name = $theAuthor;
+                            }
+                            
+                            echo $full_name;
                         }
-                        if ($full_name == '') {
-                            $full_name = $theAuthor;
-                        }
-                        echo $full_name;
+                                                
                     }
                     ?>
 
