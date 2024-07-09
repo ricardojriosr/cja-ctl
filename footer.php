@@ -22,22 +22,22 @@ if ( is_singular(array( 'team-member'))) {
 if ( is_singular(array( 'areas-we-serve'))) {
     $showForm = true;    
 }
-if ((!is_front_page(  )) && ($showForm)) { 
-    if (is_page( array(144) )) {
+if (is_page( array(144) )) {
+
 ?>
 <div class="contact-form-container">
     <div id="google-maps">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754501.658071377!2d-75.67438275345958!3d42.379349611686216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3842beff2a1%3A0x6d809f893f412a57!2sCatalano%20Law!5e0!3m2!1sen!2sus!4v1714695373858!5m2!1sen!2sus" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
     </div>
-<div id="form-container-bg" class="no-home is-desktop">
-    <div id="form-container">
-        <h2 class="uppercase f-white">How <span class="f-red-gradient">Can We Help?</span></h2>        
-        <div id="form-container-inside"></div>
+    <div id="form-container-bg" class="no-home is-desktop">
+        <div id="form-container">
+            <h2 class="uppercase f-white">How <span class="f-red-gradient">Can We Help?</span></h2>        
+            <div id="form-container-inside"></div>
+        </div>
     </div>
 </div>
-</div>
 <?php
-    } else {
+} elseif ((!is_front_page(  )) && ($showForm)) { 
 ?>
 <div id="form-container-bg" class="no-home is-desktop desktop-footer-padding">
     <div id="form-container">
@@ -47,16 +47,15 @@ if ((!is_front_page(  )) && ($showForm)) {
     </div>
 </div>
 <?php
-    }
     echo do_shortcode('[gravityform id="1"]');
-}
+}   
 ?>
     <div class="footer">
         <div class="desktop-container">
             <div class="desktop-container-reverse">
                 <div class="logo">
                     <a href="/">
-                        <img src="/wp-content/themes/cja-ctl/assets/img/logo-main.png" alt="Catalano Home">
+                        <img src="/wp-content/themes/cja-ctl/assets/img/logo-main.webp" alt="Catalano Home" width="1337" height="175">
                     </a>
                 </div>            
                 <div class="location">
@@ -64,13 +63,13 @@ if ((!is_front_page(  )) && ($showForm)) {
                 </div>
             </div>
             <div class="social">
-                <a href="#">
+                <a href="https://www.facebook.com/petercatalanoinjurylawyers/" target="_blank" aria-label="Facebook">
                     <i class="fa-brands fa-square-facebook"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.youtube.com/channel/UCLRYRRbrhCVwHCaUSzmuYng" target="_blank" aria-label="Youtube">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/peter-catalano-639629198/" target="_blank" aria-label="Linkedin">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
@@ -120,13 +119,24 @@ if ((!is_front_page(  )) && ($showForm)) {
         </div>
         <div class="copyright f-white">
             Copyright &copy; Catalano Law
-            <h5 class="f-white">Law Firm Marketing by <a class="f-red" href="https://cjadvertising.com" target="_blank">cj Advertising</a></h5>
+            <h5 class="f-white">Law Firm Marketing by <a class="f-red" href="https://www.cjadvertising.com/" target="_blank">cj Advertising</a></h5>
         </div>
     </div>
 
     <?php wp_footer(); ?>
+    <script type="text/javascript" src="//cdn.calltrk.com/companies/199594784/f6398a707c661c108afd/12/swap.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/splide/splide.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/menu.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js"></script>
+    <script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        ttd_dom_ready( function() {
+            if (typeof TTDUniversalPixelApi === 'function') {
+                var universalPixelApi = new TTDUniversalPixelApi();
+                universalPixelApi.init("uckayuf", ["vq6vcb0"], "https://insight.adsrvr.org/track/up");
+            }
+        });
+    </script>
+    <style>/* this is the new slot */</style>
 </body>
 </html>

@@ -124,8 +124,8 @@ function prefix_insert_post_ads( $content ) {
     </div>
     </div><br>';
     // echo do_shortcode('[gravityform id="1"]');
-    
-    if (( is_singular(array( 'practice-areas'))) && (catalanowins_detect_is_mobile())) {
+    $acticateContentForm = false;
+    if (( is_singular(array( 'practice-areas'))) && (catalanowins_detect_is_mobile()) && ($acticateContentForm)) {
         return prefix_insert_after_paragraph( $ad_code, $content );
     }
         
@@ -178,8 +178,20 @@ function get_two_sentences($content) {
 
         $response = $first_two . '.'; //add a dot
     }
+    $response = truncateString($response, 250);
     return $response;
 }
+
+
+
+function truncateString($string, $maxLength = 250) {
+    if (strlen($string) > $maxLength) {
+      $string = substr($string, 0, $maxLength - 3) . "...";
+    }
+    return $string;
+}
+
 ?>
+
 
 

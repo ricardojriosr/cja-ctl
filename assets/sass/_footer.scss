@@ -4,7 +4,7 @@
     vertical-align: middle;
     justify-content: center;
     align-items: center;            
-    background: linear-gradient(0deg, rgba(#000, 0.5), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/footer-bg.png');
+    background: linear-gradient(0deg, rgba(#000, 0.5), rgba(#000, 0.8)), url('/wp-content/themes/cja-ctl/assets/img/footer-bg.webp');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -108,6 +108,7 @@
                 height: auto;
                 @media screen and (min-width: 1200px) {
                     height: 50px;
+                    width: auto;
                 }
             }
         }

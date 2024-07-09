@@ -1,14 +1,14 @@
 .areas-we-serve-template-default {
     .hero-banner.t3 {
-        min-height: 400px;
-        max-height: 406px;
+        min-height: 500px;
+        max-height: 500px;
         img {
-            min-height: 400px;
-            max-height: 406px;
+            min-height: 500px;
+            max-height: 500px;
         }
         &::after {
-            min-height: 400px;
-            max-height: 406px;
+            min-height: 500px;
+            max-height: 500px;
         }
         margin-bottom: 40px;
         @media screen and (min-width: 1200px) {
@@ -21,45 +21,7 @@
             height: 0;
         }
     }
-    .office-info {
-        margin-top: 10px;
-        display: flex;        
-        flex-direction: row;
-        column-gap: 20px;
-        @media screen and (min-width: 1200px) {
-            column-gap: 40px;
-        }
-        a {
-            color: #FFF;
-            text-align: center;            
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 200;
-            line-height: normal;
-            text-decoration: none;
-            display: flex;
-            flex-direction: row;
-            vertical-align: middle;
-            align-items: center;
-            justify-content: center;
-            span {
-                text-decoration: underline;
-            }
-            @media screen and (min-width: 1200px) {
-                font-size: 24px;
-            }
-            svg {
-                height: 25px;
-                width: 25px;
-                margin-right: 5px;
-                @media screen and (min-width: 1200px) {
-                    width: 36px;
-                    height: 36px;
-                    margin-right: 10px;
-                }
-            }
-        }
-    }
+    
     .page-content {
         .post-content {
             .the-content {
@@ -78,4 +40,44 @@
             }
         }
     }    
+}
+
+.office-info {
+    margin-top: 10px;
+    display: flex;        
+    flex-direction: row;
+    column-gap: 20px;
+    @media screen and (min-width: 1200px) {
+        column-gap: 40px;
+    }
+    a {
+        color: #FFF;
+        text-align: center;            
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        span {
+            text-decoration: none;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 24px;
+        }
+        svg {
+            height: 25px;
+            width: 25px;
+            margin-right: 5px;
+            @media screen and (min-width: 1200px) {
+                width: 36px;
+                height: 36px;
+                margin-right: 10px;
+            }
+        }
+    }
 }

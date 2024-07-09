@@ -76,6 +76,8 @@ if (menuB) {
         })
     }
 
+    
+
     if (subMenuMobile) {
         [].forEach.call(subMenuMobile, function(caretOption) {
             caretOption.addEventListener("click", function(e) {

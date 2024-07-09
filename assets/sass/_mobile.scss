@@ -1,0 +1,30 @@
+@media screen and (max-width: 500px) {
+    .page-id-1470.page-template-default:not(.page-template-page-overlay,.home) {
+        .hero-banner-bg {
+            margin-bottom: 70px;    
+            h1 {
+                span.f-red-gradient.f-150.ExtraBold {
+                    font-size: 36px;        
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 1199px) {
+    .home {
+        .hero-banner.hero-home {
+            background-size: contain;
+            &::after {
+                content: none;
+            }            
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .page-id-144 {
+        .contact-form-container {
+            flex-direction: column-reverse;
+        }
+    }
+}

@@ -28,7 +28,7 @@ Template Name: Blog Page
                     $date = get_the_date( );
                 ?>
                     <div class="post-item <?php if ($counterPosts >= 9) { echo 'hide-post'; } ?>">
-                        <div class="image" style="background-image: url('<?php echo $postImage; ?>');"></div>
+                        <div class="image" style="background-image: url('<?php echo $postImage; ?>');" onclick="goToURL('<?php echo $link; ?>')"></div>
                         <div class="caption">
                             <h4 class="f-black">
                                 <?php echo $title; ?>

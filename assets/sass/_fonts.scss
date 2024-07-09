@@ -379,9 +379,15 @@ h2.attorney-title {
 }
 
 h2.f-case-results {
-    font-size: 54px !important;
+    font-size: 48px !important;
     span {
+        font-size: 48px !important;
+    }
+    @media screen and (min-width: 400px) {
         font-size: 54px !important;
+        span {
+            font-size: 54px !important;
+        }
     }
     @media screen and (min-width: 1200px) {
         font-size: 4vw !important;
@@ -390,9 +396,9 @@ h2.f-case-results {
         }
     }
     @media screen and (min-width: 1600px) {
-        font-size: 3.6vw !important;
+        font-size: 3.4vw !important;
         span {
-            font-size: 3.6vw !important;
+            font-size: 3.4vw !important;
         }
     }
     @media screen and (min-width: 2000px) {
@@ -421,4 +427,13 @@ h2.f-case-results {
 
 span.red-text {
     color: #ED0D27;
+}
+
+.no-backclip {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.contrast-red {
+    color: #B3091D !important;
 }

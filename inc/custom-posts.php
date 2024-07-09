@@ -105,7 +105,7 @@ function catalanowins_create_posttype_team() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'team-member'),
+            'rewrite' => array('slug' => 'team-member', 'with_front' => false),
             'show_in_rest' => true,
         )
     );
@@ -194,7 +194,7 @@ function catalanowins_create_posttype_faq() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'faq-answers'),
+            'rewrite' => array('slug' => 'faq-answers','with_front' => false),
             'show_in_rest' => true,
         )
     );
@@ -280,7 +280,7 @@ function catalanowins_create_posttype_practice() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'practice-areas'),
+            'rewrite' => array('slug' => 'practice-areas','with_front' => false),
             'show_in_rest' => true,
         )
     );
@@ -366,7 +366,7 @@ function catalanowins_create_posttype_office() {
             ),
             'public' => true,
             'has_archive' => true,
-            'rewrite' => array('slug' => 'areas-we-serve'),
+            'rewrite' => array('slug' => 'areas-we-serve','with_front' => false),
             'show_in_rest' => true,
         )
     );

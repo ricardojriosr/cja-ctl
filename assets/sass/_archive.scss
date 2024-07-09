@@ -76,13 +76,13 @@
     }
     // Practice Areas
     .hero-banner.hero-pa {
-        min-height: 500px;
+        min-height: 600px;
         @media screen and (min-width: 1200px) {
             min-height: 700px;
         }
         img,
         &::after {
-            min-height: 500px;
+            min-height: 600px;
             @media screen and (min-width: 1200px) {
                 min-height: 700px;
             }

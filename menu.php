@@ -1,8 +1,8 @@
 <nav id="menu-nav-b">
         <div class="call d-flex f-row f-center">
             <a href="tel:<?php echo $themePhone; ?>" class="call">
-                <img src="/wp-content/themes/cja-ctl/assets/img/phone-icon.svg" alt="Call Catalano" class="call-icon call-mobile-icon"> 
-                <img src="/wp-content/themes/cja-ctl/assets/img/phone-call-iconwhite.png" alt="Call Catalano" class="call-icon call-desktop-icon"> 
+                <img src="/wp-content/themes/cja-ctl/assets/img/phone-icon.svg" alt="Call Catalano" class="call-icon call-mobile-icon" width='30' height='30'> 
+                <img src="/wp-content/themes/cja-ctl/assets/img/phone-call-iconwhite.png" alt="Call Catalano" class="call-icon call-desktop-icon" width='30' height='30'> 
                 <?php echo hueman_phone_format($themePhone, $numberFormat); ?>
                 <div class="espanol">Se habla<br>Espa&ntilde;ol</div>
             </a>            

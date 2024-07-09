@@ -38,6 +38,9 @@ if (document.querySelector('.splide')) {
         perPage: 3,
         focus  : 'center',
         breakpoints: {
+            // 1500: {
+            //     perPage: 1,       
+            // },  
             1200: {
                 perPage: 1,           
             },   

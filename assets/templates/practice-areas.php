@@ -4,7 +4,7 @@
     </picture>
     <div class="caption-hero">
         <h1 class="f-red uppercase center">
-            <span class="f-white small-font">Our</span><br>
+            <span class="f-white small-font no-backclip">Our</span><br>
             Practice Areas
         </h1>
         <p class="f-white center">

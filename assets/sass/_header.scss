@@ -163,6 +163,8 @@
     
             #main-menu-container {
                 max-width: 100%;               
+                max-height:800px;
+	            overflow-y: scroll;
                 #main-menu {
                     max-width: 100%;               
                     .sub-menu {                        
@@ -331,12 +333,6 @@
                         display: flex;
                         flex-direction: row;
                         li {
-                            &:hover {
-                                .fa.menu-mobile-option.fa-caret-down,
-                                .fa.menu-mobile-option.fa-caret-up {
-                                    color: #ED0D27;
-                                }
-                            }
                             .sub-menu {
                                 display: none;
                                 &.is-visible {
@@ -345,8 +341,59 @@
                                     padding: 20px;
                                     position: absolute;
                                     top: 85px;
-                                    max-width: 500px;
-                                    min-width: 200px;
+                                    max-width: 600px;
+                                    min-width: 400px;
+                                    flex-direction: column;
+                                    @media screen and (min-width: 1200px)  and (max-width: 1440px)  {
+                                        padding: 10px;
+                                    }
+                                    li {
+                                        &:hover {
+                                            .fa.menu-mobile-option.fa-caret-down,
+                                            .fa.menu-mobile-option.fa-caret-up {
+                                                color: #ED0D27;
+                                            }
+                                        }
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
+                                        .sub {
+                                            display: none;
+                                        }
+                                        a, span {
+                                            color: $white;
+                                            text-decoration: none;                                            
+                                            &:hover {
+                                                // padding-left: 10px;
+                                                // padding-right: 10px;
+                                                // padding-top: 2px;
+                                                // padding-bottom: 2px;
+                                                color: #ED0D27;
+                                                .fa.menu-mobile-option.fa-caret-down,
+                                                .fa.menu-mobile-option.fa-caret-up {
+                                                    color: #ED0D27;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:hover {
+                                .fa.menu-mobile-option.fa-caret-down,
+                                .fa.menu-mobile-option.fa-caret-up {
+                                    color: #ED0D27;
+                                }
+                                .sub-menu {
+                                    display: flex;
+                                    background: black;
+                                    display: flex;
+                                    padding: 20px;
+                                    @media screen and (min-width: 1200px)  and (max-width: 1440px)  {
+                                        padding: 10px;
+                                    }
+                                    position: absolute;
+                                    top: 85px;
+                                    max-width: 600px;
+                                    min-width: 400px;
                                     flex-direction: column;
                                     li {
                                         &:hover {
@@ -355,8 +402,8 @@
                                                 color: #ED0D27;
                                             }
                                         }
-                                        padding-top: 10px;
-                                        padding-bottom: 10px;
+                                        padding-top: 5px;
+                                        padding-bottom: 5px;
                                         .sub {
                                             display: none;
                                         }
@@ -364,10 +411,10 @@
                                             color: $white;
                                             text-decoration: none;                                            
                                             &:hover {
-                                                padding-left: 10px;
-                                                padding-right: 10px;
-                                                padding-top: 5px;
-                                                padding-bottom: 5px;
+                                                // padding-left: 10px;
+                                                // padding-right: 10px;
+                                                // padding-top: 2px;
+                                                // padding-bottom: 2px;
                                                 color: #ED0D27;
                                                 .fa.menu-mobile-option.fa-caret-down,
                                                 .fa.menu-mobile-option.fa-caret-up {
@@ -422,23 +469,26 @@
                     align-items: center;   
                     #main-menu {
                         width: 100%;
-                        height: 85px;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         vertical-align: middle;
                         column-gap: 30px;
                         @media screen and (min-width: 1500px) {
-                            column-gap: 30px;
+                            column-gap: 20px;
                         }
                         @media screen and (min-width: 1800px) {
-                            column-gap: 70px;
+                            column-gap: 40px;
                         }
                         li {
+                            height: 100%;
+                            position: relative;
                             .sub {
                                 display: none;
                             }
                             a, span {
+                                height: 100%;
                                 color: $white;
                                 text-decoration: none;
                                 font-weight: 200;
@@ -446,11 +496,21 @@
                                 padding-right: 10px;
                                 padding-top: 5px;
                                 padding-bottom: 5px;
+                                @media screen and (min-width: 1200px)  and (max-width: 1440px)  {
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    padding-top: 2px;
+                                    padding-bottom: 2px;
+                                }
                                 color: #FFF;
                                 font-size: 21px;
                                 font-style: normal;
                                 font-weight: 500;
                                 line-height: normal;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                vertical-align: middle;
                                 &:hover {
                                     color: #ED0D27;
                                     .fa.menu-mobile-option.fa-caret-down,
@@ -460,7 +520,14 @@
                                 }
                             }
                             i {
-                                margin-left: 0px;
+                                position: absolute;
+                                right: -10px;
+                                top: 0;
+                                bottom: 0;
+                                vertical-align: middle;
+                                display: flex;
+                                height: 100%;
+                                align-items: center;
                                 color: $white;
                                 text-decoration: none;
                                 cursor: pointer;

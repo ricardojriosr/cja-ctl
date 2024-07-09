@@ -7,7 +7,7 @@
         .hero-banner {
             max-width: 100%;
             width: 100%;
-            min-height: 400px;            
+            min-height: 600px;            
             @media screen and (min-width: 1200px) {
                 min-height: 600px;
             }
@@ -66,7 +66,7 @@
             display: flex;
             object-fit: cover;
             width: 100%;
-            min-height: 400px;
+            min-height: 600px;
             object-position: center center;
             position: absolute;
             top: 0;
@@ -80,7 +80,7 @@
         }
         &::after {
             content: " ";
-            min-height: 400px;
+            min-height: 600px;
             z-index: 3;
             position: relative;
             display: flex;
@@ -284,8 +284,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        @media screen and (min-width: 1200px) {
-            transform: translateY(-200px);
+        @media screen and (min-width: 1200px) {            
             margin-bottom: -200px;
             align-self: center;
             width: 900px;
@@ -297,6 +296,14 @@
                 line-height: 160px;
             }
             
+        }
+        @media screen and (min-width: 1200px) {
+            transform: translateY(-300px);
+            margin-bottom: -300px;
+        }
+        @media screen and (min-width: 1400px) {
+            transform: translateY(-200px);
+            margin-bottom: -200px;
         }
     }
     .container-attorneys {
@@ -323,12 +330,12 @@
 .page-id-144 {
     .container-site {
         .hero-banner {
-            min-height: 500px !important;
+            min-height: 650px !important;
             .f-image {
-                min-height: 500px !important;
+                min-height: 650px !important;
             }
             &::after {
-                min-height: 500px !important;    
+                min-height: 650px !important;    
             }
         }
     }    
@@ -337,6 +344,9 @@
         z-index: 10;
         transform: translateY(-60px);
         border: 2px solid black;
+        @media screen and (min-width: 1200px) {
+            transform: translateY(-100px);
+        }
     }
 }
 .page-id-1434 {
@@ -413,3 +423,41 @@
     }
 }
 
+.page-id-582 {
+    .hero-banner.hero-banner-bg.t2 {
+        display: none;
+    }
+    .page-content {
+        max-width: 100%;
+        margin-top: 120px;
+        @media screen and (min-width: 1200px) {
+            max-width: $maxDesktop;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.page-id-582 {
+    &> div.container-site > div.page-content > div > pre > div > ul.wsp-pages-list > li.page_item.page-item-410 {
+        display: none;
+    }
+    .page_item.page-item-1638 {
+        display: none;
+    }
+    ul.wsp-posts-list {
+        line-height: 22px;
+        margin-top: 0;
+        margin-bottom: 0;
+        li {
+            line-height: 22px;
+            &:first-of-type {
+                margin-top: 10px;
+            }
+        }
+    }
+    &> div.container-site > div.page-content > div > pre.wp-block-preformatted {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

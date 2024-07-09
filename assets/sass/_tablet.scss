@@ -112,6 +112,41 @@
         }
         .faq-container {
             margin-top: 350px;
+            h2 {
+                text-align: center;
+            }
         }
+    }
+    .page-id-1470 {
+        .container-site {
+            .hero-banner.hero-banner-bg.t2 {
+                min-height: 600px !important;
+                .caption-hero-bg.t1 {
+                    top: 500px;
+                }
+            }
+        }
+    }
+    .home {
+        &> div.container-site > div > div.hero-banner.hero-home > div.caption-banner-att > div.slogan-mobile {
+            transform: translateY(-60px);
+        }
+        &> div.container-site > div > div.hero-banner.hero-home > div.caption-banner-att > div.slogan-mobile > a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &> div.container-site > div > div.hero-banner.hero-home > div.caption-banner-att > div.slogan-mobile > img:nth-child(4) {
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        &> div.container-site > div > div.hero-banner.hero-home > div.caption-banner-att > div.slogan-mobile > h1 {
+            margin-bottom: 10px;
+        }
+    }
+    .attorney-block .container-attorneys .team-staff, .attorney-block .container-attorneys .team-staff-2,
+    .attorney-block .container-attorneys .team-staff, .attorney-block .container-attorneys .secondary-attorney,
+    .attorney-block .container-attorneys .team-staff, .attorney-block .container-attorneys .secondary-attorney-2 {
+        width: 50%;
+        flex-basis: 50%;
     }
 }
